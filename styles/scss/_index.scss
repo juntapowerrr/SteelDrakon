@@ -1,0 +1,171 @@
+.main {
+    width: 100%;
+    margin: 72px 0 0 0;
+    padding: 147px 0 210px 0;
+    @media (max-width: 767px) {
+        padding: 64px 0 40px 0;
+    }
+    &-bg {
+        display: block;
+        width: 100%;
+        background: url(../../assets/images/bg-main.png) no-repeat;
+        background-size: cover;
+        background-position: center 15%;
+        // @media (max-width: 767px) {
+        //     background-position: center 50%;
+        // }
+    }
+    &-content {
+        max-width: 600px;
+        @media (max-width: 767px) {
+            max-width: 325px;
+        }
+        &__title {
+            color: #FFF;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+            font-size: 74px;
+            font-weight: 600;
+            line-height: 74px;
+            letter-spacing: -0.2px;
+            @media (max-width: 767px) {
+                font-size: 40px;
+                line-height: 44px;
+            }
+        }
+        &__subtitle {
+            color: $white-2;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            margin: 44px 0 0 0;
+            max-width: 530px;
+            @media (max-width: 767px) {
+                font-size: 14px;
+                margin: 20px 0 0 0;
+            }
+        }
+        &__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 64px 0 0 0;
+        }
+    }
+}
+
+.services {
+    margin: -1px 0 0 0;
+    &-bg{
+        display: block;
+        width: 100%;
+        background: url(../../assets/images/bg-metal.png);
+        background-size: cover;
+    }
+    &__title{
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.091px;
+        padding: 20px 0;
+    }
+    &-cards {
+        margin: 44px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &__row {
+            display: flex;
+            gap: 24px;
+        }
+        &__card{
+            padding: 21px 13px;
+            height: 423px;
+            border-radius: 12px;
+            background-size: contain;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(19, 19, 22, 0.77) 0%,
+                 rgba(19, 19, 22, 0.00) 100%);
+                border-radius: 12px 12px 0 0;
+                z-index: 1;
+            }
+        }
+        &__card--txt{
+            color: $yellow;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__row:nth-child(1) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/furniture.png) no-repeat;
+                flex-basis: 280px;
+            }
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/gates.png) no-repeat;
+                flex-basis: 580px;
+            }
+            .services-cards__card:nth-child(3) {
+                background: url(../../assets/images/landscaping.png) no-repeat;
+                flex-basis: 280px;
+            }
+        }
+        &__row:nth-child(2) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/braziers.png) no-repeat;
+                flex-basis: 580px;
+            }
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/railings.png) no-repeat;
+                flex-basis: 580px;
+            }
+        }
+        &__row:nth-child(3) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/benches.png) no-repeat;
+                flex-basis: 580px;
+            }
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/interior.png) no-repeat;
+                flex-basis: 280px;
+            }
+            .services-cards__card:nth-child(3) {
+                background: url(../../assets/images/sculptures.png) no-repeat;
+                flex-basis: 280px;
+            }
+        }
+        &__row:nth-child(4) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/armor.png) no-repeat;
+                flex-basis: 280px;
+            }
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/metal.png) no-repeat;
+                flex-basis: 280px;
+            }
+            .services-cards__card:nth-child(3) {
+                background: url(../../assets/images/ideas.png) no-repeat;
+                flex-basis: 580px;
+                position: relative;
+                .btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%)
+                }
+            }
+        }
+    }
+}
