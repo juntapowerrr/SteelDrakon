@@ -58,8 +58,8 @@
     &-bg{
         display: block;
         width: 100%;
-        background: url(../../assets/images/bg-metal.png);
-        background-size: cover;
+        background: url(../../assets/images/bg-metal.png) repeat;
+        background-size: contain;
     }
     &__title{
         color: #FFF;
@@ -68,12 +68,20 @@
         line-height: 24px;
         letter-spacing: 0.091px;
         padding: 20px 0;
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 16px;
+            padding: 14px 0;
+        }
     }
     &-cards {
         margin: 44px 0 0 0;
         display: flex;
         flex-direction: column;
         gap: 24px;
+        @media (max-width: 767px) {
+            display: none;
+        }
         &__row {
             display: flex;
             gap: 24px;
@@ -107,7 +115,6 @@
             position: relative;
             z-index: 2;
         }
-
         &__row:nth-child(1) {
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/furniture.png) no-repeat;
@@ -166,6 +173,160 @@
                     transform: translate(-50%, -50%)
                 }
             }
+        }
+    }
+    &-cards-mob {
+        margin: 14px 0 0 0;
+        display: none;
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &__row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+        &__card{
+            padding: 11px 0 0 11px;
+            height: 144px;
+            border-radius: 12px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(19, 19, 22, 0.77) 0%,
+                 rgba(19, 19, 22, 0.00) 100%);
+                border-radius: 12px 12px 0 0;
+                z-index: 1;
+            }
+        }
+        &__card--txt{
+            color: $yellow;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 14px;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 2;
+        }
+        &__row:nth-child(1) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/furniture.png) no-repeat;
+                flex-basis: 100px;
+                background-size: cover;
+                background-position: center;
+            }
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/gates.png) no-repeat;
+                flex-basis: 220px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        &__row:nth-child(2) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/landscaping.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: center;
+            }
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/interior.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        &__row:nth-child(3) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/braziers.png) no-repeat;
+                flex-basis: 220px;
+                background-size: cover;
+                background-position: center;
+            }
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/railings.png) no-repeat;
+                flex-basis: 100px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        &__row:nth-child(4) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/benches.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: center;
+            }
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/sculptures.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        &__row:nth-child(5) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/armor.png) no-repeat;
+                flex-basis: 100px;
+                background-size: cover;
+                background-position: center;
+            }
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/metal.png) no-repeat;
+                flex-basis: 220px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}
+
+.experience {
+    &-bg{
+        display: block;
+        width: 100%;
+        background: url(../../assets/images/bg-metal.png) repeat;
+        background-size: contain;
+    }
+    &__title {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.091px;
+        padding: 20px 0;
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 16px;
+            padding: 14px 0;
+        }
+    }
+    &-cards {
+        display: flex;
+        gap: 24px;
+    }
+    &-card {
+        flex: 33.3%;
+        &__title {
+            color: $white-2;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+        &__subtitle {
+            color: $white-4;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0.12px;
         }
     }
 }
