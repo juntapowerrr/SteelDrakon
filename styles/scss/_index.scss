@@ -1,3 +1,9 @@
+body {
+    background: url(../../assets/images/bg-metal.png) repeat;
+    background-size: contain;
+    background-position: center 100%;
+}
+
 .main {
     width: 100%;
     margin: 72px 0 0 0;
@@ -54,28 +60,28 @@
 }
 
 .services {
-    margin: -1px 0 0 0;
-    &-bg{
-        display: block;
-        width: 100%;
-        background: url(../../assets/images/bg-metal.png) repeat;
-        background-size: contain;
-    }
+    //margin: -1px 0 0 0;
+    // &-bg{
+    //     display: block;
+    //     width: 100%;
+    //     background: url(../../assets/images/bg-metal.png) repeat;
+    //     background-size: contain;
+    // }
     &__title{
         color: #FFF;
         font-size: 24px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.091px;
-        padding: 20px 0;
+        padding: 20px 0 0 0;
         @media (max-width: 767px) {
             font-size: 16px;
             line-height: 16px;
-            padding: 14px 0;
+            padding: 14px 0 0 0;
         }
     }
     &-cards {
-        margin: 44px 0 0 0;
+        padding: 44px 0;
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -176,7 +182,7 @@
         }
     }
     &-cards-mob {
-        margin: 14px 0 0 0;
+        padding: 14px 0;
         display: none;
         @media (max-width: 767px) {
             display: flex;
@@ -290,43 +296,168 @@
 }
 
 .experience {
-    &-bg{
-        display: block;
-        width: 100%;
-        background: url(../../assets/images/bg-metal.png) repeat;
-        background-size: contain;
-    }
+    // &-bg{
+    //     display: block;
+    //     width: 100%;
+    //     background: url(../../assets/images/bg-metal.png) repeat;
+    //     background-size: contain;
+    // }
     &__title {
         color: #FFF;
         font-size: 24px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.091px;
-        padding: 20px 0;
+        padding: 20px 0 0 0;
         @media (max-width: 767px) {
             font-size: 16px;
             line-height: 16px;
-            padding: 14px 0;
+            padding: 14px 0 0 0;
         }
     }
     &-cards {
         display: flex;
         gap: 24px;
+        padding: 44px 0;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 8px;
+            padding: 14px 0;
+        }
     }
     &-card {
-        flex: 33.3%;
+        flex: 25%;
+        padding: 23px 37px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(29, 28, 32, 0.00);
         &__title {
             color: $white-2;
             font-size: 36px;
             font-weight: 600;
-            line-height: 30px;
+            //line-height: 30px;
         }
         &__subtitle {
             color: $white-4;
             font-size: 12px;
             font-weight: 500;
-            line-height: 22px;
+            //line-height: 22px;
             letter-spacing: 0.12px;
+            margin: 12px 0 0 0;
         }
     }
+}
+
+.clients {
+    // &-bg{
+    //     display: block;
+    //     width: 100%;
+    //     background: url(../../assets/images/bg-metal.png) repeat;
+    //     background-size: contain;
+    // }
+    &__title {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.091px;
+        padding: 20px 0 0 0;
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 16px;
+            padding: 14px 0 0 0;
+        }
+    }
+    &-cards{
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: center;
+        gap: 44px;
+        padding: 44px 0;
+        @media (max-width: 767px) {
+            gap: 8px;
+            padding: 14px 0;
+        }
+    }
+    &-card {
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: $dark-grey;
+        padding: 32px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 42px;
+        flex-basis: 350px;
+        @media (max-width: 767px) {
+            flex-direction: row;
+            align-items: center;
+            flex-basis: 100%;
+            gap: 15px;
+            padding: 10px 12px;
+        }
+        &__icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid $grey;
+            background: $light-grey;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__txt {
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.165px;
+            @media (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.price {
+    padding: 80px 0;
+    &-bg {
+        display: block;
+        width: 100%;
+        background-color: $yellow;
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 100px;
+        @media (max-width: 1100px) {
+            flex-direction: column;
+        }
+    }
+    &-left {
+        max-width: 610px;
+        @media (max-width: 767px) {
+            display: none;
+        }
+        &__title {
+            color: #000;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+            font-size: 74px;
+            font-weight: 600;
+            line-height: 74px;
+            letter-spacing: -0.2px;
+        }
+        &__subtitle {
+            color: $light-grey;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            margin: 44px 0 0 0;
+            max-width: 500px;
+        }
+    }
+    // &-right {
+
+    // }
 }
