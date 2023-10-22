@@ -41,15 +41,15 @@
     }
     select {
         color: #1C1C1C;
-        option {
-            color: #1C1C1C;
-            font-size: 14px;
-            font-weight: 400;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border: none;
-        }
+    }
+    option {
+        color: #1C1C1C;
+        font-size: 14px;
+        font-weight: 400;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
     }
     &-textarea {
         width: 100%;
