@@ -705,7 +705,6 @@ body {
     transition: all 0.3s ease 0s;
     background: url(../../assets/images/bg-metal.png);
     background-position: center;
-    background-attachment: fixed;
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
