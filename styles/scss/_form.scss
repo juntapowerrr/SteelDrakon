@@ -1,8 +1,18 @@
-// .form-wrapper {
-
-// }
+.form-wrapper {
+    &__title{
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0.061px;
+        @media (min-width: 767px) {
+            display: none;
+        }
+    }
+}
 
 .form {
+    margin: 14px 0 0 0;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.04);
     background: $dark-grey;
@@ -69,6 +79,9 @@
         font-weight: 500;
         line-height: 25px;
         position: relative;
+        @media (max-width: 767px) {
+            color: #FFF;
+        }
         &::before {
             content: '';
             display: block;

@@ -420,11 +420,17 @@ body {
 }
 
 .price {
-    padding: 80px 0;
+    padding: 64px 0;
+    @media (max-width: 767px) {
+        padding: 64px 0 0 0;
+    }
     &-bg {
         display: block;
         width: 100%;
         background-color: $yellow;
+        @media (max-width: 767px) {
+            background-color: transparent;
+        }
     }
     &-wrapper {
         display: flex;
@@ -460,4 +466,17 @@ body {
     // &-right {
 
     // }
+}
+
+.contacts {
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: 767px) {
+        display: none;
+    }
+    .map {
+        margin: 64px 0 0 0;
+    }
 }
