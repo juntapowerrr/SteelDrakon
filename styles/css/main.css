@@ -109,6 +109,12 @@ button {
   color: #A6A7A9;
 }
 
+.appearance-none {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+}
+
 body {
   background: url(../../assets/images/bg-metal.png) repeat;
   background-size: contain;
@@ -823,9 +829,7 @@ body {
   border: 1px solid #F7CA3A;
 }
 .form select {
-  appearance: none;
-  -webkit-appearance: none;
-  overflow: hidden;
+  color: #1C1C1C;
 }
 .form-textarea {
   width: 100%;
@@ -940,14 +944,19 @@ body {
   margin: 14px 0 0 0;
   padding: 20px;
   max-width: 330px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #1D1C20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.email-card p {
+.email-card__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.email-card__wrapper p {
   color: #F7CA3A;
   font-size: 14px;
   font-weight: 600;

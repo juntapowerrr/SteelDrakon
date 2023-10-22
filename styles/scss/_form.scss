@@ -40,11 +40,7 @@
         }
     }
     select {
-        appearance: none;
-        -webkit-appearance: none;
-        overflow: hidden;
-        // background: url('../../assets/svg/select-arrow.svg') no-repeat right;
-        // background-position-x: calc(100% - 13px);
+        color: #1C1C1C;
     }
     &-textarea {
         width: 100%;

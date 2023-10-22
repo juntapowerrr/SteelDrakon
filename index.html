@@ -228,7 +228,7 @@
                     <form action="" method="post" class="form">
                         <input class="form-input" type="text" name="name" placeholder="Ваше Ім'я" required>
                         <input class="form-input" type="tel" name="phone" placeholder="Номер телефону" required>
-                        <select class="form-input" name="product" required>
+                        <select class="form-input appearance-none" name="product" required>
                             <option value="">Оберіть виріб</option>
                             <option value="furniture">Ковані меблі</option>
                             <option value="gates">Ворота та паркани</option>
@@ -271,8 +271,13 @@
             <div class="email">
                 <h2 class="email__title">Пошта для технічного завдання:</h2>
                 <div class="email-card">
-                    <img src="./assets/svg/mail.svg" alt="Email icon">
-                    <p>example@gmail.com</p>
+                    <div class="email-card__wrapper">
+                        <img src="./assets/svg/mail.svg" alt="Email icon">
+                        <p class="email-text">example@gmail.com</p>
+                    </div>
+                    <button data-url-copied-text="Скопійовано!" onclick="copyText()" role="button">
+                        <img src="./assets/svg/copy.svg" alt="Copy icon">
+                    </button>
                 </div>
             </div>
             <div class="map">
@@ -317,8 +322,13 @@
             <div class="email">
                 <h2 class="email__title">Пошта для технічного завдання:</h2>
                 <div class="email-card">
-                    <img src="./assets/svg/mail.svg" alt="Email icon">
-                    <p>example@gmail.com</p>
+                    <div class="email-card__wrapper">
+                        <img src="./assets/svg/mail.svg" alt="Email icon">
+                        <p class="email-text">example@gmail.com</p>
+                    </div>
+                    <button data-url-copied-text="Скопійовано!" onclick="copyText()" role="button">
+                        <img src="./assets/svg/copy.svg" alt="Copy icon">
+                    </button>
                 </div>
             </div>
             <div class="map">
@@ -335,6 +345,6 @@
     </footer>
     <script src="./js/fixedheaderscroll.js"></script>
     <script src="./js/header.js"></script>
-    <!-- <script src="./js/parallax.js"></script> -->
+    <script src="./js/copy.js"></script>
 </body>
 </html>
