@@ -1083,7 +1083,7 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 @media (max-width: 767px) {
   .buttons {
