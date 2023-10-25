@@ -20,3 +20,13 @@ $("span.metal").on("click", function(){
 .slideUp(); - скрыть
 .slideDown(); - показать
 */
+const element = document.querySelector(".buttons");
+
+element.addEventListener('wheel', (event) => {
+  event.preventDefault();
+
+  element.scrollBy({
+    left: event.deltaY < 0 ? -30 : 30,
+    
+  });
+});

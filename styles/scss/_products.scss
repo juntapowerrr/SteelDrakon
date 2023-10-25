@@ -1,8 +1,10 @@
 .filter{
-    width: 100%;
+    max-width: 100%;
     padding: 75px 0 0 0;
-    margin: 44px 0 0 0;
-    position: relative;
+    margin: 44px 0;
+    @media (max-width: 767px) {
+        margin: 22px 0;
+    }
 }
 .buttons{
     //width: 100%;
@@ -13,16 +15,23 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 6px;
+    //scroll
+    @media (max-width: 767px) {
+        max-width: 100%;
+        overflow-x: hidden;
+        flex-wrap: nowrap;
+    }
 }
 .buttons span{
+    display: block;
     padding: 8px 14px;
+    white-space: nowrap;
     color: #000;
     font-size: 14px;
     font-weight: 500;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: $yellow;
-    display: block;
     width: max-content;
     cursor: pointer;
 }
@@ -40,6 +49,9 @@
     gap: 20px 50px;
     @media (max-width: 625px) {
             gap: 20px 8px;
+    }
+    @media (max-width: 767px) {
+        margin: 22px 0 0 0;
     }
 }
   
