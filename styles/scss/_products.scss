@@ -20,7 +20,7 @@
     //scroll
     @media (max-width: 767px) {
         max-width: 100%;
-        overflow: auto;
+        //overflow: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         flex-wrap: nowrap;
