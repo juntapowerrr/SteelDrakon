@@ -15,10 +15,12 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 6px;
+    //background: $dark-grey;
+    //padding: 22px 0 17px 0;
     //scroll
     @media (max-width: 767px) {
         max-width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
         flex-wrap: nowrap;
     }
 }

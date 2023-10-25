@@ -1087,7 +1087,7 @@ body {
 @media (max-width: 767px) {
   .buttons {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     flex-wrap: nowrap;
   }
 }
