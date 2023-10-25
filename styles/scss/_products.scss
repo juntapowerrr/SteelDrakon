@@ -21,7 +21,7 @@
     @media (max-width: 767px) {
         max-width: 100%;
         //overflow: auto;
-        overflow-x: auto;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         touch-action: pan-x;
         -ms-touch-action: pan-x;
