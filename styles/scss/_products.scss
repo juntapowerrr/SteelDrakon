@@ -20,7 +20,7 @@
     //scroll
     @media (max-width: 767px) {
         max-width: 100%;
-        overflow: hidden;
+        overflow: auto;
         flex-wrap: nowrap;
     }
 }
