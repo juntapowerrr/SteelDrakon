@@ -1087,8 +1087,7 @@ body {
 @media (max-width: 767px) {
   .buttons {
     max-width: 100%;
-    overflow: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
     -ms-touch-action: pan-x;
