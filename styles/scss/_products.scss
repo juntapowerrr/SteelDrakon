@@ -23,8 +23,8 @@
         //overflow: auto;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        touch-action: none;
-        -ms-touch-action: none;
+        touch-action: pan-x;
+        -ms-touch-action: pan-x;
         flex-wrap: nowrap;
     }
 }
