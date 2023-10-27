@@ -1,0 +1,54 @@
+body {
+    //background-color: #1D1C20;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../assets/images/bg-metal-3.png), lightgray 50%;
+    background-size: contain;
+    background-position: center 100%;
+    background-repeat: repeat-y;
+}
+
+// .container-wrapper {
+//     margin: 72px 0 0 0;
+// }
+
+.title {
+    margin: 120px 0 0 0;
+    color: $white;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.2px;
+}
+
+.text {
+    margin: 20px 0 0 0;
+    color: $white-2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.form-wrapper{
+    margin: 20px 0;
+    max-width: 325px;
+    .methods {
+        &__txt-white {
+            color: #FFF;
+        }
+    }
+}
+
+.contacts {
+    margin: 74px 0 0 0;
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: 767px) {
+        display: none;
+    }
+    .map {
+        margin: 64px 0 0 0;
+    }
+}

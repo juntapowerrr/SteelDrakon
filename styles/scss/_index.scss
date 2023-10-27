@@ -1,7 +1,9 @@
-body {
-    background: url(../../assets/images/bg-metal.png) repeat;
+.bg-wrapper {
+    //background-color: #1D1C20;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../assets/images/bg-metal-3.png), lightgray 50%;
     background-size: contain;
     background-position: center 100%;
+    background-repeat: repeat-y;
 }
 
 .main {
@@ -295,129 +297,13 @@ body {
     }
 }
 
-.experience {
-    // &-bg{
-    //     display: block;
-    //     width: 100%;
-    //     background: url(../../assets/images/bg-metal.png) repeat;
-    //     background-size: contain;
-    // }
-    &__title {
-        color: #FFF;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0.091px;
-        padding: 20px 0 0 0;
-        @media (max-width: 767px) {
-            font-size: 16px;
-            line-height: 16px;
-            padding: 14px 0 0 0;
-        }
-    }
-    &-cards {
-        display: flex;
-        gap: 24px;
-        padding: 44px 0;
-        @media (max-width: 767px) {
-            flex-direction: column;
-            gap: 8px;
-            padding: 14px 0;
-        }
-    }
-    &-card {
-        flex: 25%;
-        padding: 23px 37px;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(29, 28, 32, 0.00);
-        &__title {
-            color: $white-2;
-            font-size: 36px;
-            font-weight: 600;
-            //line-height: 30px;
-        }
-        &__subtitle {
-            color: $white-4;
-            font-size: 12px;
-            font-weight: 500;
-            //line-height: 22px;
-            letter-spacing: 0.12px;
-            margin: 12px 0 0 0;
-        }
-    }
-}
+// .experience {
 
-.clients {
-    // &-bg{
-    //     display: block;
-    //     width: 100%;
-    //     background: url(../../assets/images/bg-metal.png) repeat;
-    //     background-size: contain;
-    // }
-    &__title {
-        color: #FFF;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0.091px;
-        padding: 20px 0 0 0;
-        @media (max-width: 767px) {
-            font-size: 16px;
-            line-height: 16px;
-            padding: 14px 0 0 0;
-        }
-    }
-    &-cards{
-        display: flex;
-        flex-wrap: wrap;
-        //justify-content: center;
-        gap: 44px;
-        padding: 44px 0;
-        @media (max-width: 767px) {
-            gap: 8px;
-            padding: 14px 0;
-        }
-    }
-    &-card {
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: $dark-grey;
-        padding: 32px;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 42px;
-        flex-basis: 350px;
-        @media (max-width: 767px) {
-            flex-direction: row;
-            align-items: center;
-            flex-basis: 100%;
-            gap: 15px;
-            padding: 10px 12px;
-        }
-        &__icon {
-            width: 50px;
-            height: 50px;
-            border: 1px solid $grey;
-            background: $light-grey;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        &__txt {
-            color: #FFF;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: -0.165px;
-            @media (max-width: 767px) {
-                font-size: 12px;
-            }
-        }
-    }
-}
+// }
+
+// .clients {
+
+// }
 
 .price {
     padding: 64px 0;

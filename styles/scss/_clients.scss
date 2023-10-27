@@ -1,0 +1,70 @@
+.clients {
+    // &-bg{
+    //     display: block;
+    //     width: 100%;
+    //     background: url(../../assets/images/bg-metal.png) repeat;
+    //     background-size: contain;
+    // }
+    &__title {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.091px;
+        padding: 20px 0 0 0;
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 16px;
+            padding: 14px 0 0 0;
+        }
+    }
+    &-cards{
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: center;
+        gap: 44px;
+        padding: 44px 0;
+        @media (max-width: 767px) {
+            gap: 8px;
+            padding: 14px 0;
+        }
+    }
+    &-card {
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: $dark-grey;
+        padding: 32px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 42px;
+        flex-basis: 350px;
+        @media (max-width: 767px) {
+            flex-direction: row;
+            align-items: center;
+            flex-basis: 100%;
+            gap: 15px;
+            padding: 10px 12px;
+        }
+        &__icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid $grey;
+            background: $light-grey;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__txt {
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.165px;
+            @media (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
