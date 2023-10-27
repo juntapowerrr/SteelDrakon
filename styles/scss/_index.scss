@@ -16,11 +16,12 @@
     &-bg {
         display: block;
         width: 100%;
-        background: url(../../assets/images/bg-main.png) no-repeat;
+        background-image: url("../../assets/images/bg-main.png");
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center 15%;
         // @media (max-width: 767px) {
-        //     background-position: center 50%;
+        //     background-position: center bottom;
         // }
     }
     &-content {

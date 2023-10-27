@@ -136,7 +136,8 @@ button {
 .main-bg {
   display: block;
   width: 100%;
-  background: url(../../assets/images/bg-main.png) no-repeat;
+  background-image: url("../../assets/images/bg-main.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center 15%;
 }
@@ -468,7 +469,7 @@ button {
 .header {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -1px;
   left: 0;
   z-index: 999;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
