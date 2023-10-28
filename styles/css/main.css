@@ -117,10 +117,15 @@ button {
 }
 
 .bg-wrapper {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-3.png), lightgray 50%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-5.png), lightgray 50%;
   background-size: contain;
   background-position: center 100%;
   background-repeat: repeat-y;
+}
+@media (max-width: 767px) {
+  .bg-wrapper {
+    background-position: center 100%;
+  }
 }
 
 .main {
@@ -509,8 +514,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 189px;
-  height: 44px;
+  width: 190px;
 }
 .header__logo img {
   width: 100%;
@@ -1154,6 +1158,7 @@ button {
   align-items: center;
 }
 .clients-card__txt {
+  width: 100%;
   color: #FFF;
   font-size: 16px;
   font-weight: 400;
