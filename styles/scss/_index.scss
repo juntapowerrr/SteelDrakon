@@ -74,6 +74,8 @@
             flex-wrap: wrap;
             gap: 20px;
             margin: 64px 0 0 0;
+            position: relative;
+            z-index: 20;
         }
     }
 }
@@ -125,6 +127,7 @@
             border-radius: 12px;
             background-size: contain;
             position: relative;
+            display: block;
             &::before {
                 content: '';
                 display: block;
@@ -138,6 +141,11 @@
                 border-radius: 12px 12px 0 0;
                 z-index: 1;
             }
+            // &:hover {
+            //     background-blend-mode: saturation;
+            //     transition: background-blend-mode .3s ease;
+            // }
+        }
         }
         &__card--txt{
             color: $yellow;
@@ -152,7 +160,6 @@
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/furniture.png) no-repeat;
                 flex-basis: 280px;
-            }
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/gates.png) no-repeat;
                 flex-basis: 580px;
@@ -211,6 +218,8 @@
     &-cards-mob {
         padding: 14px 0;
         display: none;
+        position: relative;
+        z-index: 20;
         @media (max-width: 767px) {
             display: flex;
             flex-direction: column;
