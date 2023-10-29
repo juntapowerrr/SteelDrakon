@@ -605,17 +605,6 @@ button {
   .header__menu.active {
     top: 0;
   }
-  .header__menu #btnPhone2 {
-    display: none;
-  }
-  .header__menu #btnCta1 {
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-    padding: 0 26px;
-    border-radius: 24px;
-    text-align: left;
-  }
 }
 .header__list {
   display: flex;
@@ -660,7 +649,24 @@ button {
     font-size: 14px;
   }
 }
-.header .btn-phone {
+.header__title {
+  color: #BBB;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  display: none;
+}
+@media (max-width: 767px) {
+  .header__title {
+    display: block;
+    margin: 0 0 30px 0;
+  }
+}
+.header__phone {
+  z-index: 3;
+  display: none;
+}
+.header__phone .btn-phone {
   width: 38px;
   height: 38px;
   border-radius: 24px;
@@ -671,10 +677,21 @@ button {
   align-items: center;
   margin: 0 13px 0 11px;
 }
-.header .btn-phone img {
+.header__phone .btn-phone img {
   display: block;
   width: 20px;
   height: 20px;
+}
+.header__phone .methods-socials {
+  position: absolute;
+  top: 48px;
+  right: 65px;
+  max-width: 375px;
+  height: 88px;
+  display: none;
+  border-radius: 0px 0px 12px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #2F2E32;
 }
 .header .btn-yellow, .header .btn-phone {
   z-index: 3;
@@ -709,6 +726,10 @@ button {
   border-radius: 6px;
   border: 1px solid var(--gray-300, #DEE2E7);
   background: #DEE2E7;
+  color: #1C1C1C;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .form-input:first-child {
   margin: 0;
@@ -726,6 +747,9 @@ button {
   color: #1C1C1C;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
+  background: url(../../assets/svg/select-arrow.svg) no-repeat right #DEE2E7;
+  background-position-x: calc(100% - 16px);
 }
 .form-textarea {
   width: 100%;
@@ -751,6 +775,20 @@ button {
 }
 .form button {
   margin: 44px 0 0 0;
+  padding: 7px 65px 7px 15px;
+  width: 220px;
+  position: relative;
+  color: #1C1C1C;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+.form button::before {
+  content: url(../../assets/svg/btn-arrow.svg);
+  position: absolute;
+  top: 10px;
+  right: 17px;
 }
 
 .methods {

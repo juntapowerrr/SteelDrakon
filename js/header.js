@@ -12,6 +12,12 @@ $(document).ready(function() {
         $('.header__burger, .header__menu').toggleClass('active');
         $('body').toggleClass('lock');
     });
+
+    //$("#phoneBody1").hide();
+    $("#btnPhone1").click(function() {
+        $("#phoneBody1").show("300");
+    });
+
     $(window).on('scroll', function() {
         $('.container').css({
             opacity: 1,
