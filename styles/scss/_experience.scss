@@ -6,34 +6,40 @@
         line-height: 24px;
         letter-spacing: 0.091px;
         padding: 20px 0 0 0;
+
         @media (max-width: 767px) {
             font-size: 16px;
             line-height: 16px;
             padding: 14px 0 0 0;
         }
     }
+
     &-cards {
         display: flex;
         gap: 24px;
-        padding: 44px 0;
+        padding: 44px 0 0 0;
+
         @media (max-width: 767px) {
             flex-direction: column;
             gap: 8px;
-            padding: 14px 0;
+            padding: 14px 0 0 0;
         }
     }
+
     &-card {
         flex: 25%;
         padding: 23px 37px;
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         background: rgba(29, 28, 32, 0.00);
+
         &__title {
             color: $white-2;
             font-size: 36px;
             font-weight: 600;
             //line-height: 30px;
         }
+
         &__subtitle {
             color: $white-4;
             font-size: 12px;

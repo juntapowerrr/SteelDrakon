@@ -15,9 +15,11 @@
     margin: 72px 0 0 0;
     padding: 147px 0 210px 0;
     position: relative;
+
     @media (max-width: 767px) {
         padding: 64px 0 40px 0;
     }
+
     &-bg {
         display: block;
         width: 100%;
@@ -25,10 +27,13 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center 15%;
-        // @media (max-width: 767px) {
-        //     background-position: center bottom;
-        // }
+
+        @media (max-width: 767px) {
+            background-image: url("../../assets/images/bg-main-mob.png");
+            background-position: center;
+        }
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -40,11 +45,14 @@
         width: 100%;
         height: 100px;
     }
+
     &-content {
         max-width: 600px;
+
         @media (max-width: 767px) {
             max-width: 325px;
         }
+
         &__title {
             color: #FFF;
             text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
@@ -52,11 +60,13 @@
             font-weight: 600;
             line-height: 74px;
             letter-spacing: -0.2px;
+
             @media (max-width: 767px) {
                 font-size: 40px;
                 line-height: 44px;
             }
         }
+
         &__subtitle {
             color: $white-2;
             font-size: 20px;
@@ -64,11 +74,13 @@
             line-height: 22px;
             margin: 44px 0 0 0;
             max-width: 530px;
+
             @media (max-width: 767px) {
                 font-size: 14px;
                 margin: 20px 0 0 0;
             }
         }
+
         &__btns {
             display: flex;
             flex-wrap: wrap;
@@ -82,6 +94,7 @@
 
 .services {
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -94,7 +107,8 @@
         height: 100px;
         z-index: 10;
     }
-    &__title{
+
+    &__title {
         color: #FFF;
         font-size: 24px;
         font-weight: 400;
@@ -103,31 +117,37 @@
         padding: 20px 0 0 0;
         position: relative;
         z-index: 20;
+
         @media (max-width: 767px) {
             font-size: 16px;
             line-height: 16px;
-            padding: 14px 0 0 0;
+            //padding: 14px 0 0 0;
         }
     }
+
     &-cards {
-        padding: 44px 0;
+        padding: 44px 0 0 0;
         display: flex;
         flex-direction: column;
         gap: 24px;
+
         @media (max-width: 767px) {
             display: none;
         }
+
         &__row {
             display: flex;
             gap: 24px;
         }
-        &__card{
+
+        &__card {
             padding: 21px 13px;
             height: 423px;
             border-radius: 12px;
             background-size: contain;
             position: relative;
             display: block;
+
             &::before {
                 content: '';
                 display: block;
@@ -137,75 +157,89 @@
                 top: 0;
                 left: 0;
                 background: linear-gradient(180deg, rgba(19, 19, 22, 0.77) 0%,
-                 rgba(19, 19, 22, 0.00) 100%);
+                        rgba(19, 19, 22, 0.00) 100%);
                 border-radius: 12px 12px 0 0;
                 z-index: 1;
             }
+
+            &--txt {
+                color: $yellow;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0.3px;
+                position: relative;
+                z-index: 2;
+            }
+
             // &:hover {
             //     background-blend-mode: saturation;
             //     transition: background-blend-mode .3s ease;
             // }
         }
-        }
-        &__card--txt{
-            color: $yellow;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 18px;
-            letter-spacing: 0.3px;
-            position: relative;
-            z-index: 2;
-        }
+
         &__row:nth-child(1) {
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/furniture.png) no-repeat;
                 flex-basis: 280px;
+            }
+
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/gates.png) no-repeat;
                 flex-basis: 580px;
             }
+
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/landscaping.png) no-repeat;
                 flex-basis: 280px;
             }
         }
+
         &__row:nth-child(2) {
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/braziers.png) no-repeat;
                 flex-basis: 580px;
             }
+
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/railings.png) no-repeat;
                 flex-basis: 580px;
             }
         }
+
         &__row:nth-child(3) {
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/benches.png) no-repeat;
                 flex-basis: 580px;
             }
+
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/interior.png) no-repeat;
                 flex-basis: 280px;
             }
+
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/sculptures.png) no-repeat;
                 flex-basis: 280px;
             }
         }
+
         &__row:nth-child(4) {
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/armor.png) no-repeat;
                 flex-basis: 280px;
             }
+
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/metal.png) no-repeat;
                 flex-basis: 280px;
             }
+
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/ideas.png) no-repeat;
                 flex-basis: 580px;
                 position: relative;
+
                 .btn {
                     position: absolute;
                     top: 50%;
@@ -215,26 +249,31 @@
             }
         }
     }
+
     &-cards-mob {
-        padding: 14px 0;
+        padding: 14px 0 0 0;
         display: none;
         position: relative;
         z-index: 20;
+
         @media (max-width: 767px) {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
+
         &__row {
             display: flex;
             gap: 8px;
             justify-content: center;
         }
-        &__card{
+
+        &__card {
             padding: 11px 0 0 11px;
             height: 144px;
             border-radius: 12px;
             position: relative;
+
             &::before {
                 content: '';
                 display: block;
@@ -244,12 +283,13 @@
                 top: 0;
                 left: 0;
                 background: linear-gradient(180deg, rgba(19, 19, 22, 0.77) 0%,
-                 rgba(19, 19, 22, 0.00) 100%);
+                        rgba(19, 19, 22, 0.00) 100%);
                 border-radius: 12px 12px 0 0;
                 z-index: 1;
             }
         }
-        &__card--txt{
+
+        &__card--txt {
             color: $yellow;
             font-size: 14px;
             font-weight: 600;
@@ -258,6 +298,7 @@
             position: relative;
             z-index: 2;
         }
+
         &__row:nth-child(1) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/furniture.png) no-repeat;
@@ -265,6 +306,7 @@
                 background-size: 100%;
                 background-position: center;
             }
+
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/gates.png) no-repeat;
                 flex-basis: 220px;
@@ -272,6 +314,7 @@
                 background-position: center;
             }
         }
+
         &__row:nth-child(2) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/landscaping-mob.png) no-repeat;
@@ -279,6 +322,7 @@
                 background-size: cover;
                 background-position: center;
             }
+
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/interior.png) no-repeat;
                 flex-basis: 160px;
@@ -286,6 +330,7 @@
                 background-position: center bottom;
             }
         }
+
         &__row:nth-child(3) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/braziers.png) no-repeat;
@@ -293,6 +338,7 @@
                 background-size: cover;
                 background-position: center;
             }
+
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/railings-mob.png) no-repeat;
                 flex-basis: 100px;
@@ -300,6 +346,7 @@
                 background-position: 25% 0%;
             }
         }
+
         &__row:nth-child(4) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/benches-mob.png) no-repeat;
@@ -307,6 +354,7 @@
                 background-size: cover;
                 background-position: 80% 100%;
             }
+
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/sculptures-mob.png) no-repeat;
                 flex-basis: 160px;
@@ -314,6 +362,7 @@
                 background-position: center;
             }
         }
+
         &__row:nth-child(5) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/armor.png) no-repeat;
@@ -321,6 +370,7 @@
                 background-size: cover;
                 background-position: center;
             }
+
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/metal-mob.png) no-repeat;
                 flex-basis: 220px;
@@ -331,41 +381,61 @@
     }
 }
 
-// .experience {
 
-// }
+.experience {
+    margin: 64px 0 0 0;
+}
 
-// .clients {
+.clients {
+    margin: 64px 0 0 0;
 
-// }
+    &-cards {
+        padding: 44px 0 0 0;
+        margin: 0 0 150px 0;
+
+        @media (max-width: 767px) {
+            padding: 14px 0 0 0;
+            margin: 0;
+        }
+    }
+}
 
 .price {
     padding: 64px 0;
+
     @media (max-width: 767px) {
         padding: 64px 0 0 0;
     }
+
     &-bg {
         display: block;
         width: 100%;
         background-color: $yellow;
+
         @media (max-width: 767px) {
             background-color: transparent;
         }
     }
+
     &-wrapper {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 100px;
+
         @media (max-width: 1100px) {
             flex-direction: column;
+            align-items: flex-start
         }
     }
+
     &-left {
         max-width: 610px;
+
         @media (max-width: 767px) {
             display: none;
         }
+
         &__title {
             color: #000;
             text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
@@ -374,6 +444,7 @@
             line-height: 74px;
             letter-spacing: -0.2px;
         }
+
         &__subtitle {
             color: $light-grey;
             font-size: 20px;
@@ -383,19 +454,35 @@
             max-width: 500px;
         }
     }
-    // &-right {
 
-    // }
+    &-right {
+        .form-wrapper {
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .form-wrapper {
+                max-width: 100%;
+            }
+
+            form {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 .contacts {
-    padding: 64px 0;
+    margin: 64px 0 0 0;
+    padding: 0 0 64px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @media (min-width: 767px) {
         display: none;
     }
+
     .map {
         margin: 64px 0 0 0;
     }

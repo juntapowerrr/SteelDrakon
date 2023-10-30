@@ -40,13 +40,13 @@ body {
 }
 
 .contacts {
-    margin: 74px 0 0 0;
-    padding: 64px 0;
+    margin: 64px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (min-width: 767px) {
         display: none;
+        justify-content: flex-start;
     }
     .map {
         margin: 64px 0 0 0;

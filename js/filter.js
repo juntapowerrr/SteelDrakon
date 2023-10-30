@@ -27,6 +27,5 @@ element.addEventListener('wheel', (event) => {
 
   element.scrollBy({
     left: event.deltaY < 0 ? -30 : 30,
-    
   });
 });

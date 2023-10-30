@@ -10,12 +10,32 @@
     crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="overlay"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
                 <a href="./" class="header__logo">
                     <img src="./assets/images/logo.png" id="headerLogo" alt="Logo">
                 </a>
+                <div class="header__phone-mob">
+                    <a href*="#" class="btn-phone" id="btnPhone2">
+                        <img src="./assets/images/icon-phone.png" alt="Icon phone">
+                    </a>
+                    <div class="methods-socials" id="phoneBody2">
+                        <a class="methods-socials__viber" href="viber://chat?number=38050668123123" target="_blank">
+                            <img src="./assets/images/viber.png" alt="Viber logo">
+                        </a>
+                        <a class="methods-socials__whatsapp" href="https://api.whatsapp.com/send?phone=38050668123123" target="_blank">
+                            <img src="./assets/images/whatsapp.png" alt="WhatsApp logo">
+                        </a>
+                        <a class="methods-socials__phone" href="tel:+38050668123123">
+                            <div class="methods-socials__phone-item">
+                                <img src="./assets/images/icon-phone.png" alt="Phone icon">
+                            </div>
+                            <p class="methods-socials__phone-txt">050 668 123 123</p>
+                        </a>
+                    </div>
+                </div>
                 <div class="header__burger">
                     <span></span>
                 </div>
@@ -32,7 +52,7 @@
                         </li>
                     </ul>
                     <div class="header__phone">
-                        <a href="#" class="btn-phone hover-btn" id="btnPhone1">
+                        <a href*="#" class="btn-phone hover-btn" id="btnPhone1">
                             <img src="./assets/images/icon-phone.png" alt="Icon phone">
                         </a>
                         <div class="methods-socials" id="phoneBody1">
@@ -235,19 +255,19 @@
         <div class="price price-bg" id="sectionPrice">
             <div class="price-wrapper container">
                 <div class="price-left">
-                    <h2 class="price-left__title">Бажаєте прорахувати ціну? Залишай те зявку</h2>
-                    <h2 class="price-left__subtitle">Створюємо унікальні та ексклюзивні вироби з металу будь якої складності</h2>
+                    <h2 class="price-left__title">Бажаєте прорахувати ціну?</h2>
+                    <h2 class="price-left__subtitle">Залишайте заявку та наш менеджер прорахує вам ціни</h2>
                 </div>
                 <div class="price-right">
                     <div class="form-wrapper">
                         <h2 class="form-wrapper__title">Обговорити проект</h2>
-                        <form action="" method="post" class="form">
+                        <form action="./php/mail.php" method="post" class="form">
                             <input class="form-input" type="text" name="name" placeholder="Ваше Ім'я" required>
-                            <input class="form-input" type="tel" name="phone" placeholder="Номер телефону" required>
-                            <select class="form-input appearance-none" name="product" required>
-                                <option value="">Оберіть виріб</option>
+                            <input class="form-input form-input-phone" type="tel" name="phone" placeholder="Номер телефону" required>
+                            <select class="form-input appearance-none" name="product" id="product">
+                                <option value="" selected>Оберіть виріб</option>
                                 <option value="furniture">Ковані меблі</option>
-                                <option value="gates">Ворота та паркани</option>
+                                <option value="gates">Ворота та паркани</option>    
                                 <option value="landscaping">Благоустрій</option>
                                 <option value="braziers">Ковані мангали</option>
                                 <option value="railings">Ковані перила</option>
@@ -258,6 +278,7 @@
                                 <option value="metal">Металоконструкції</option>
                                 <option value="idea">Ваша ідея</option>
                               </select>
+                              <!-- <input id="products_text" type = "hidden" name = "products_text" value = "" /> -->
                               <textarea class="form-textarea" name="text" placeholder="Коротко про проєкт"></textarea>
                             <button class="btn btn-yellow hover-btn" type="submit">Залишити заявку</button>
                         </form>
@@ -363,5 +384,7 @@
     <script src="./js/fixedheaderscroll.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/copy.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/form-send.js"></script>
 </body>
 </html>
