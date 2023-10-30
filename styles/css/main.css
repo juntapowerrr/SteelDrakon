@@ -258,6 +258,15 @@ button {
   background-size: contain;
   position: relative;
   display: block;
+  perspective: 1000px;
+  transition: transform 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Тень */
+}
+.services-cards__card:hover {
+  transform: rotateX(15deg) rotateY(15deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Увеличенная тень при наведении */
 }
 .services-cards__card::before {
   content: "";
