@@ -6,15 +6,17 @@ body {
     background-repeat: repeat-y;
 }
 
-.filter{
+.filter {
     max-width: 100%;
     padding: 75px 0 0 0;
     margin: 44px 0;
+
     @media (max-width: 767px) {
         margin: 22px 0;
     }
 }
-.buttons{
+
+.buttons {
     //width: 100%;
     // margin:auto;
     // margin-bottom:50px;
@@ -23,6 +25,7 @@ body {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 6px;
+
     //padding: 10px 20px;
     //background: $dark-grey;
     //padding: 22px 0 17px 0;
@@ -36,50 +39,58 @@ body {
         flex-wrap: nowrap;
     }
 }
-.buttons span{
+
+.buttons span {
     display: block;
     padding: 8px 14px;
     white-space: nowrap;
-    color: #000;
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: $yellow;
+    background: $light-grey;
     width: max-content;
     cursor: pointer;
 }
-.buttons .disabled {
-    background: $grey;
+
+.buttons span:hover {
+    color: #000;
+    background: $yellow;
+    transition: all .3s ease;
 }
+
 // .buttons span:hover{
 //     color:tomato;
 // }
-.items{
+.items {
     width: 100%;
     margin: 44px 0 0 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px 50px;
+
     @media (max-width: 625px) {
-            gap: 20px 8px;
+        gap: 20px 8px;
     }
+
     @media (max-width: 767px) {
         margin: 22px 0 0 0;
     }
 }
-  
-.item{
+
+.item {
     max-width: 160px;
+
     &__thumbnail {
         flex-basis: 160px;
         height: 200px;
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         position: relative;
-        @media (max-width: 625px) {
 
-        }
+        @media (max-width: 625px) {}
+
         img {
             position: absolute;
             object-fit: cover;
@@ -88,6 +99,7 @@ body {
             border-radius: 12px;
         }
     }
+
     &__title {
         margin: 12px 0 0 0;
         max-width: 160px;
@@ -98,11 +110,13 @@ body {
         letter-spacing: 0.5px;
     }
 }
-  
-.clear,.clear:before,.clear:after{
-    content:"";
-    display:block;
-    clear:both;
+
+.clear,
+.clear:before,
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 // div.site{background:red;}

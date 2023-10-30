@@ -1153,18 +1153,20 @@ body {
   display: block;
   padding: 8px 14px;
   white-space: nowrap;
-  color: #000;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #F7CA3A;
+  background: #2F2E32;
   width: max-content;
   cursor: pointer;
 }
 
-.buttons .disabled {
-  background: #403F42;
+.buttons span:hover {
+  color: #000;
+  background: #F7CA3A;
+  transition: all 0.3s ease;
 }
 
 .items {
@@ -1212,7 +1214,9 @@ body {
   letter-spacing: 0.5px;
 }
 
-.clear, .clear:before, .clear:after {
+.clear,
+.clear:before,
+.clear:after {
   content: "";
   display: block;
   clear: both;
