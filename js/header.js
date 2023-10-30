@@ -12,6 +12,7 @@ $(document).ready(function() {
         $('.header__burger, .header__menu').toggleClass('active');
         $('body').toggleClass('lock');
     });
+
     $('.header__burger').click(function() {
         $("#phoneBody1, #phoneBody2, #overlay").fadeOut();
     });
@@ -22,6 +23,10 @@ $(document).ready(function() {
     });
     $("#btnPhone2").click(function(){
         $("#phoneBody2, #overlay").fadeToggle();
+    });
+
+    $('#overlay').click(function() {
+        $("#overlay, #phoneBody1, #phoneBody2").fadeOut();
     });
 
     $(window).on('scroll', function() {
