@@ -89,7 +89,7 @@ button {
   line-height: 24px;
   letter-spacing: 0.2px;
   text-align: center;
-  border-radius: 32px;
+  border-radius: 12px;
   padding: 7px 15px;
 }
 @media (max-width: 767px) {
@@ -118,7 +118,7 @@ button {
 }
 
 .bg-wrapper {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-5.png), lightgray 50%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-1.png), lightgray 50%;
   background-size: contain;
   background-position: center 100%;
   background-repeat: repeat-y;
@@ -709,7 +709,7 @@ button {
     height: 56px;
     padding: 0 26px;
     background: #1D1C20;
-    border-radius: 24px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.04);
     display: flex;
     justify-content: flex-start;
@@ -812,8 +812,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #2F2E32;
 }
-.header .btn-yellow,
-.header .btn-phone {
+.header .btn-yellow, .header .btn-phone {
   z-index: 3;
 }
 
@@ -832,7 +831,7 @@ button {
 
 .form {
   margin: 14px 0 0 0;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #1D1C20;
   max-width: 330px;
@@ -932,7 +931,6 @@ button {
   display: block;
   width: 52px;
   height: 1px;
-  border-radius: 24px;
   background: #2F2E32;
   position: absolute;
   left: 0;
@@ -943,7 +941,6 @@ button {
   display: block;
   width: 52px;
   height: 1px;
-  border-radius: 24px;
   background: #2F2E32;
   position: absolute;
   right: 0;
@@ -952,7 +949,7 @@ button {
 .methods-socials {
   margin: 24px 0 0 0;
   padding: 13px 34px;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #1D1C20;
   display: flex;
@@ -1001,7 +998,7 @@ button {
   margin: 14px 0 0 0;
   padding: 20px;
   max-width: 330px;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #1D1C20;
   display: flex;
@@ -1034,7 +1031,7 @@ button {
 .map-card {
   margin: 14px 0 0 0;
   padding: 23px;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #1D1C20;
 }
@@ -1054,7 +1051,7 @@ button {
   margin: 20px 0 0 0;
   max-width: 100%;
   height: 275px;
-  border-radius: 13px;
+  border-radius: 12px;
 }
 
 .footer {
@@ -1130,6 +1127,13 @@ body {
     margin: 22px 0;
   }
 }
+@media (max-width: 767px) {
+  .filter .container:first-child {
+    padding: 0;
+    margin: 0 0 0 20px;
+    max-width: 100%;
+  }
+}
 
 .buttons {
   display: flex;
@@ -1145,8 +1149,18 @@ body {
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
     -ms-touch-action: pan-x;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
     flex-wrap: nowrap;
   }
+}
+
+.buttons::-webkit-scrollbar {
+  width: 10px;
+}
+
+.buttons::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 
 .buttons span {
@@ -1252,7 +1266,7 @@ body {
 .experience-card {
   flex: 25%;
   padding: 23px 37px;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(29, 28, 32, 0);
 }
@@ -1340,7 +1354,7 @@ body {
 }
 
 body {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-5.png), lightgray 50%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-1.png), lightgray 50%;
   background-size: contain;
   background-position: center 100%;
   background-repeat: repeat-y;
@@ -1390,7 +1404,7 @@ body {
 }
 
 body {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-5.png), lightgray 50%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../assets/images/bg-metal-1.png), lightgray 50%;
   background-size: cover;
   background-position: center 100%;
   background-repeat: repeat-y;

@@ -1,6 +1,6 @@
 body {
     //background-color: #1D1C20;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../assets/images/bg-metal-5.png), lightgray 50%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../assets/images/bg-metal-1.png), lightgray 50%;
     background-size: cover;
     background-position: center 100%;
     background-repeat: repeat-y;
@@ -26,9 +26,11 @@ body {
 }
 
 .experience {
+
     //margin: 48px 0 0 0;
     &__title {
         padding: 0;
+
         @media (max-width: 767px) {
             padding: 0 0 0 0;
         }

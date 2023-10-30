@@ -13,25 +13,44 @@ function updateButtonStyles(clickedButton) {
 }
 
 $(document).ready(function () {
+  // Функция для получения значения параметра из URL
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
   // Обработчики событий для кнопок фильтрации
   $(".buttons span").on("click", function () {
-    updateButtonStyles($(this));
     var category = $(this).attr("class");
+    updateButtonStyles($(this));
+
     if (category === "all") {
-      $("div.item").fadeIn("fast");
+      $(".items .item").fadeIn("fast");
     } else {
-      $("div.item").hide();
-      $("div." + category).fadeIn("fast");
+      $(".items .item").hide();
+      $(".items ." + category).fadeIn("fast");
     }
+
+    // Скролл к выбранному фильтру
+    var selectedOffset = $(this).offset().left;
+    var containerOffset = $(".buttons").offset().left;
+    var scrollAmount = selectedOffset - containerOffset;
+    $(".buttons").animate({ scrollLeft: "+=" + scrollAmount }, "fast");
   });
 
-  // Активация первой кнопки по умолчанию
-  $(".buttons span.all").click();
-});
+  // Получаем значение параметра из URL
+  var filter = getUrlParameter('filter');
 
-$(document).on("click", "span.all", function () {
-  updateButtonStyles($(this));
-  $("div.item").fadeIn("fast");
+  // Активация фильтра, если параметр присутствует в URL
+  if (filter) {
+    $(".buttons span." + filter).click();
+  } else {
+    // Активация первой кнопки по умолчанию
+    $(".buttons span.all").click();
+  }
+
 });
 
 const element = document.querySelector(".buttons");
