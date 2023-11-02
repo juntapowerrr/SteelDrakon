@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.header__link, #btnCta1').fixedHeaderScroll( {
+    $('.header__link, #btnCta1, #btnCta2').fixedHeaderScroll( {
         headerSelector: 'header',
         offset: 0,
         offset: $('.header').offsetHeight,
