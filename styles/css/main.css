@@ -350,9 +350,9 @@ button {
   background-position: 105%;
 }
 .services-cards__row:nth-child(1) .services-cards__card:nth-child(2) {
-  background: url(../../assets/images/gates-2.jpg) no-repeat;
-  background-size: cover;
-  background-position: 60%;
+  background: url(../../assets/images/gates.jpg) no-repeat;
+  background-size: 580px 430px;
+  background-position: center top;
   flex-basis: 580px;
 }
 .services-cards__row:nth-child(1) .services-cards__card:nth-child(3) {
@@ -460,7 +460,7 @@ button {
   background-position: 105%;
 }
 .services-cards-mob__row:nth-child(1) .services-cards-mob__card:nth-child(2) {
-  background: url(../../assets/images/gates-2.jpg) no-repeat;
+  background: url(../../assets/images/gates.jpg) no-repeat;
   flex-basis: 220px;
   background-size: cover;
   background-position: 101%;
