@@ -22,8 +22,9 @@
     &-cards {
         display: flex;
         flex-wrap: wrap;
-        //justify-content: center;
+        justify-content: space-between;
         gap: 44px;
+        align-content: stretch;
 
         @media (max-width: 767px) {
             gap: 8px;
@@ -39,7 +40,7 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 42px;
-        flex-basis: 350px;
+        flex-basis: calc(100% / 3 - 42px);
 
         @media (max-width: 767px) {
             flex-direction: row;

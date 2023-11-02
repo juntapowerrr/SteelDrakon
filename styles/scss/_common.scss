@@ -29,13 +29,15 @@
 
 .btn {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
+    font-style: normal;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.2px;
     text-align: center;
     border-radius: 12px;
     padding: 7px 15px;
+    transform: translateZ(0);
     @media (max-width: 767px) {
         font-size: 14px;
     }

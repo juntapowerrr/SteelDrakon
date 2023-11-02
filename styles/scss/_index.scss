@@ -26,7 +26,7 @@
         background-image: url("../../assets/images/bg-main.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center 15%;
+        background-position: center 20%;
 
         @media (max-width: 767px) {
             background-image: url("../../assets/images/bg-main-mob.png");
@@ -151,12 +151,81 @@
             perspective: 1000px;
             transition: transform 0.5s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateZ(0);
 
-            /* Тень */
+            &--txt {
+                color: $yellow;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0.3px;
+                position: relative;
+                z-index: 2;
+                transform: translateZ(0);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -10;
+                width: 100%;
+                height: 100%;
+                background: rgba(21, 17, 13, 0.6);
+                opacity: 0;
+            }
+
+            &--hovertxt {
+                position: absolute;
+                top: 65px;
+                left: 13px;
+                right: 15px;
+                color: #FFF;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                opacity: 0;
+            }
+
+            &--hoverbtn {
+                position: absolute;
+                bottom: 13px;
+                left: 13px;
+                right: 15px;
+                padding: 6px 17.5px 8px 17px;
+                border-radius: 32px;
+                background: #F7CA3A;
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                opacity: 0;
+            }
+
             &:hover {
                 transform: rotateX(15deg) rotateY(15deg);
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                /* Увеличенная тень при наведении */
+
+                &::after {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                }
+
+                .services-cards__card--hovertxt {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                    transform: translateZ(0);
+                }
+
+                .services-cards__card--hoverbtn {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                    transform: translateZ(0);
+                }
             }
 
             &::before {
@@ -173,36 +242,26 @@
                 z-index: 1;
             }
 
-            &--txt {
-                color: $yellow;
-                font-size: 18px;
-                font-weight: 600;
-                line-height: 18px;
-                letter-spacing: 0.3px;
-                position: relative;
-                z-index: 2;
-            }
-
-            // &:hover {
-            //     background-blend-mode: saturation;
-            //     transition: background-blend-mode .3s ease;
-            // }
         }
 
         &__row:nth-child(1) {
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/furniture.png) no-repeat;
                 flex-basis: 280px;
+                background-position: 105%;
             }
 
             .services-cards__card:nth-child(2) {
-                background: url(../../assets/images/gates.png) no-repeat;
+                background: url(../../assets/images/gates-2.jpg) no-repeat;
+                background-size: cover;
+                background-position: 60%;
                 flex-basis: 580px;
             }
 
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/landscaping.png) no-repeat;
                 flex-basis: 280px;
+                background-position: 105%;
             }
         }
 
@@ -210,11 +269,14 @@
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/braziers.png) no-repeat;
                 flex-basis: 580px;
+                background-position: 105%;
             }
 
             .services-cards__card:nth-child(2) {
-                background: url(../../assets/images/railings.png) no-repeat;
+                background: url(../../assets/images/railings-2.jpg) no-repeat;
                 flex-basis: 580px;
+                background-size: cover;
+                background-position: 100%;
             }
         }
 
@@ -222,16 +284,19 @@
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/benches.png) no-repeat;
                 flex-basis: 580px;
+                background-position: 105%;
             }
 
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/interior.png) no-repeat;
                 flex-basis: 280px;
+                background-position: 105%;
             }
 
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/sculptures.png) no-repeat;
                 flex-basis: 280px;
+                background-position: 105%;
             }
         }
 
@@ -239,16 +304,19 @@
             .services-cards__card:nth-child(1) {
                 background: url(../../assets/images/armor.png) no-repeat;
                 flex-basis: 280px;
+                background-position: 105%;
             }
 
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/metal.png) no-repeat;
                 flex-basis: 280px;
+                background-position: 105%;
             }
 
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/ideas.png) no-repeat;
                 flex-basis: 580px;
+                background-position: 105%;
                 position: relative;
 
                 .btn {
@@ -315,14 +383,14 @@
                 background: url(../../assets/images/furniture.png) no-repeat;
                 flex-basis: 100px;
                 background-size: 100%;
-                background-position: center;
+                background-position: 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
-                background: url(../../assets/images/gates.png) no-repeat;
+                background: url(../../assets/images/gates-2.jpg) no-repeat;
                 flex-basis: 220px;
                 background-size: cover;
-                background-position: center;
+                background-position: 101%;
             }
         }
 
@@ -331,7 +399,7 @@
                 background: url(../../assets/images/landscaping-mob.png) no-repeat;
                 flex-basis: 160px;
                 background-size: cover;
-                background-position: center;
+                background-position: 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
@@ -347,7 +415,7 @@
                 background: url(../../assets/images/braziers.png) no-repeat;
                 flex-basis: 220px;
                 background-size: cover;
-                background-position: center;
+                background-position: 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
@@ -363,14 +431,14 @@
                 background: url(../../assets/images/benches-mob.png) no-repeat;
                 flex-basis: 160px;
                 background-size: cover;
-                background-position: 80% 100%;
+                background-position: 80% 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/sculptures-mob.png) no-repeat;
                 flex-basis: 160px;
                 background-size: cover;
-                background-position: center;
+                background-position: 105%;
             }
         }
 
@@ -379,14 +447,14 @@
                 background: url(../../assets/images/armor.png) no-repeat;
                 flex-basis: 100px;
                 background-size: cover;
-                background-position: center;
+                background-position: 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/metal-mob.png) no-repeat;
                 flex-basis: 220px;
                 background-size: cover;
-                background-position: center;
+                background-position: 105%;
             }
         }
     }

@@ -1,10 +1,11 @@
 .form-wrapper {
-    &__title{
+    &__title {
         color: #FFF;
         font-size: 16px;
         font-weight: 500;
         line-height: 25px;
         letter-spacing: 0.061px;
+
         @media (min-width: 767px) {
             display: none;
         }
@@ -18,6 +19,7 @@
     background: $dark-grey;
     max-width: 330px;
     padding: 25px 15px;
+
     &-input {
         margin: 16px 0 0 0;
         width: 100%;
@@ -30,19 +32,24 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
+
         &:first-child {
             margin: 0;
         }
+
         &::placeholder {
             color: #1C1C1C;
             font-size: 14px;
             font-weight: 400;
             line-height: 24px;
         }
-        &:active, &:focus {
+
+        &:active,
+        &:focus {
             border: 1px solid $yellow;
         }
     }
+
     select {
         color: #1C1C1C;
         font-size: 14px;
@@ -51,6 +58,7 @@
         background: url(../../assets/svg/select-arrow.svg) no-repeat right #DEE2E7;
         background-position-x: calc(100% - 16px);
     }
+
     &-textarea {
         width: 100%;
         height: 90px;
@@ -63,16 +71,20 @@
         border: 1px solid var(--gray-300, #DEE2E7);
         background: #DEE2E7;
         resize: none;
+
         &::placeholder {
             color: #8B96A5;
             font-size: 14px;
             font-weight: 400;
             line-height: 24px;
         }
-        &:active, &:focus {
+
+        &:active,
+        &:focus {
             border: 1px solid $yellow;
         }
     }
+
     button {
         margin: 44px 0 0 0;
         padding: 7px 65px 7px 15px;
@@ -83,6 +95,7 @@
         font-weight: 600;
         line-height: 24px;
         letter-spacing: 0.2px;
+
         &::before {
             content: url(../../assets/svg/btn-arrow.svg);
             position: absolute;
@@ -94,6 +107,7 @@
 
 .methods {
     margin: 24px 0 0 0;
+
     &__txt {
         text-align: center;
         color: #2F2E32;
@@ -101,9 +115,15 @@
         font-weight: 500;
         line-height: 25px;
         position: relative;
+
+        &-white {
+            color: #FFF;
+        }
+
         @media (max-width: 767px) {
             color: #FFF;
         }
+
         &::before {
             content: '';
             display: block;
@@ -114,6 +134,7 @@
             left: 0;
             top: 12px;
         }
+
         &::after {
             content: '';
             display: block;
@@ -124,8 +145,9 @@
             right: 0;
             top: 12px;
         }
-        
+
     }
+
     &-socials {
         margin: 24px 0 0 0;
         padding: 13px 34px;
@@ -137,20 +159,30 @@
         align-items: center;
         flex-wrap: nowrap;
         gap: 8px;
+
         &__viber {
-            img{
+            img {
                 display: block;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
             }
         }
+
         &__whatsapp {
-            img{
+            img {
                 display: block;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
             }
         }
+
         &__phone {
             display: flex;
             align-items: center;
             gap: 8px;
+
             //margin: 0 0 0 8px;
             &-item {
                 width: 38px;
@@ -162,6 +194,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 background: $light-grey;
             }
+
             &-txt {
                 color: $yellow;
                 font-size: 14px;
