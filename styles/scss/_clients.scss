@@ -1,0 +1,76 @@
+.clients {
+
+    &__title {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.091px;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+
+    &-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 44px;
+        align-content: stretch;
+
+        @media (max-width: 767px) {
+            gap: 8px;
+        }
+    }
+
+    &-card {
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: $dark-grey;
+        padding: 32px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 42px;
+        flex-basis: calc(100% / 3 - 42px);
+
+        @media (max-width: 767px) {
+            flex-direction: row;
+            align-items: center;
+            flex-basis: 100%;
+            gap: 15px;
+            padding: 10px 12px;
+        }
+
+        &__icon {
+            min-width: 50px;
+            max-width: 50px;
+            height: 50px;
+            border: 1px solid $grey;
+            background: $light-grey;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                display: block;
+            }
+        }
+
+        &__txt {
+            max-width: 100%;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.165px;
+
+            @media (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+    }
+}

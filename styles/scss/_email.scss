@@ -1,0 +1,32 @@
+.email {
+    &__title {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0.061px;
+    }
+    &-card {
+        margin: 14px 0 0 0;
+        padding: 20px;
+        max-width: 330px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        background: $dark-grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            p {
+                color: $yellow;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,595 @@
+.bg-wrapper {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../assets/images/bg-metal-1.png), lightgray 50%;
+    background-size: contain;
+    background-position: center 100%;
+    background-repeat: repeat-y;
+}
+
+.main {
+    width: 100%;
+    margin: 72px 0 0 0;
+    padding: 147px 0 210px 0;
+    position: relative;
+
+    @media (max-width: 767px) {
+        padding: 64px 0 40px 0;
+    }
+
+    &-bg {
+        display: block;
+        width: 100%;
+        background-image: url("../../assets/images/bg-main.png");
+        background-repeat: no-repeat;
+        background-size: 115%;
+        background-position: center 25%;
+        //background-position: center 15%;
+
+        @media (max-width: 375px) {
+            background-image: url("../../assets/images/bg-main-mob.png");
+            background-position: center;
+            background-size: cover;
+            image-rendering: pixelated;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba($color: #1D1C20, $alpha: 0), rgba($color: #1D1C20, $alpha: 1.0) 100%);
+        width: 100%;
+        height: 100px;
+    }
+
+    &-content {
+        max-width: 600px;
+
+        @media (max-width: 767px) {
+            max-width: 325px;
+        }
+
+        &__title {
+            color: #FFF;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+            font-size: 74px;
+            font-weight: 600;
+            line-height: 74px;
+            letter-spacing: -0.2px;
+
+            @media (max-width: 767px) {
+                font-size: 40px;
+                line-height: 44px;
+            }
+        }
+
+        &__location {
+            width: max-content;
+            padding: 12px;
+            margin: 24px 0 0 0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(29, 28, 32, 0.10);
+
+            @media (max-width: 767px) {
+                padding: 6px 12px;
+                margin: 20px 0 0 0;
+            }
+
+            p {
+                color: #fff;
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__subtitle {
+            color: $white-2;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            margin: 44px 0 0 0;
+            max-width: 530px;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                margin: 20px 0 0 0;
+            }
+        }
+
+        &__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 64px 0 0 0;
+            position: relative;
+            z-index: 20;
+        }
+    }
+}
+
+.services {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to top, rgba($color: #1D1C20, $alpha: 0), rgba($color: #1D1C20, $alpha: 1.0) 100%);
+        width: 100%;
+        height: 100px;
+        z-index: 10;
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.091px;
+        padding: 20px 0 0 0;
+        position: relative;
+        z-index: 20;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 16px;
+            //padding: 14px 0 0 0;
+        }
+    }
+
+    &-cards {
+        padding: 44px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        &__row {
+            display: flex;
+            gap: 20px;
+        }
+
+        &__card {
+            padding: 21px 13px;
+            height: 423px;
+            border-radius: 12px;
+            background-size: contain;
+            position: relative;
+            display: block;
+
+            perspective: 1000px;
+            transition: transform 0.5s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateZ(0);
+
+            &--txt {
+                color: $yellow;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0.3px;
+                position: relative;
+                z-index: 2;
+                transform: translateZ(0);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -10;
+                width: 100%;
+                height: 100%;
+                background: rgba(21, 17, 13, 0.6);
+                border-radius: 12px;
+                opacity: 0;
+            }
+
+            &--hovertxt {
+                position: absolute;
+                top: 65px;
+                left: 13px;
+                right: 15px;
+                color: #FFF;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                opacity: 0;
+                height: 100%;
+            }
+
+            &--hoverbtn {
+                max-width: 180px;
+                position: absolute;
+                bottom: 13px;
+                left: 13px;
+                right: 15px;
+                padding: 6px 17.5px 8px 17px;
+                border-radius: 32px;
+                background: #F7CA3A;
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                opacity: 0;
+            }
+
+            &:hover {
+                transform: rotateX(15deg) rotateY(15deg);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+                &::after {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                }
+
+                .services-cards__card--hovertxt {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                    transform: translateZ(0);
+                }
+
+                .services-cards__card--hoverbtn {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                    transform: translateZ(0);
+                }
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(19, 19, 22, 0.77) 0%,
+                        rgba(19, 19, 22, 0.00) 100%);
+                border-radius: 12px 12px 0 0;
+                z-index: 1;
+            }
+
+        }
+
+        &__row:nth-child(1) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/furniture.png) no-repeat;
+                flex-basis: 280px;
+                background-position: 105%;
+            }
+
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/gates.jpg) no-repeat;
+                background-size: 580px 430px;
+                background-position: center top;
+                flex-basis: 580px;
+            }
+
+            .services-cards__card:nth-child(3) {
+                background: url(../../assets/images/landscaping.png) no-repeat;
+                flex-basis: 280px;
+                background-position: 105%;
+            }
+        }
+
+        &__row:nth-child(2) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/braziers.png) no-repeat;
+                flex-basis: 580px;
+                background-position: 105%;
+            }
+
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/railings-2.jpg) no-repeat;
+                flex-basis: 580px;
+                background-size: cover;
+                background-position: 100%;
+            }
+        }
+
+        &__row:nth-child(3) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/benches.png) no-repeat;
+                flex-basis: 580px;
+                background-position: 105%;
+            }
+
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/interior.png) no-repeat;
+                flex-basis: 280px;
+                background-position: 105%;
+            }
+
+            .services-cards__card:nth-child(3) {
+                background: url(../../assets/images/sculptures.png) no-repeat;
+                flex-basis: 280px;
+                background-position: 105%;
+            }
+        }
+
+        &__row:nth-child(4) {
+            .services-cards__card:nth-child(1) {
+                background: url(../../assets/images/armor.png) no-repeat;
+                flex-basis: 280px;
+                background-position: 105%;
+            }
+
+            .services-cards__card:nth-child(2) {
+                background: url(../../assets/images/metal.png) no-repeat;
+                flex-basis: 280px;
+                background-position: 105%;
+            }
+
+            .services-cards__card:nth-child(3) {
+                background: url(../../assets/images/ideas.png) no-repeat;
+                flex-basis: 580px;
+                background-position: 105%;
+                position: relative;
+
+                .btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%)
+                }
+            }
+        }
+    }
+
+    &-cards-mob {
+        padding: 14px 0 0 0;
+        display: none;
+        position: relative;
+        z-index: 20;
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        &__card {
+            padding: 11px 0 0 11px;
+            height: 144px;
+            border-radius: 12px;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(19, 19, 22, 0.77) 0%,
+                        rgba(19, 19, 22, 0.00) 100%);
+                border-radius: 12px 12px 0 0;
+                z-index: 1;
+            }
+        }
+
+        &__card--txt {
+            color: $yellow;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 14px;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__row:nth-child(1) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/furniture.png) no-repeat;
+                flex-basis: 100px;
+                background-size: 100%;
+                background-position: 105%;
+            }
+
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/gates.jpg) no-repeat;
+                flex-basis: 220px;
+                background-size: cover;
+                background-position: 101%;
+            }
+        }
+
+        &__row:nth-child(2) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/landscaping-mob.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: 105%;
+            }
+
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/interior.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: center bottom;
+            }
+        }
+
+        &__row:nth-child(3) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/braziers.png) no-repeat;
+                flex-basis: 220px;
+                background-size: cover;
+                background-position: 105%;
+            }
+
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/railings-mob.png) no-repeat;
+                flex-basis: 100px;
+                background-size: cover;
+                background-position: 25% 0%;
+            }
+        }
+
+        &__row:nth-child(4) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/benches-mob.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: 80% 105%;
+            }
+
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/sculptures-mob.png) no-repeat;
+                flex-basis: 160px;
+                background-size: cover;
+                background-position: 105%;
+            }
+        }
+
+        &__row:nth-child(5) {
+            .services-cards-mob__card:nth-child(1) {
+                background: url(../../assets/images/armor.png) no-repeat;
+                flex-basis: 100px;
+                background-size: cover;
+                background-position: 105%;
+            }
+
+            .services-cards-mob__card:nth-child(2) {
+                background: url(../../assets/images/metal-mob.png) no-repeat;
+                flex-basis: 220px;
+                background-size: cover;
+                background-position: 105%;
+            }
+        }
+    }
+}
+
+
+.experience {
+    margin: 64px 0 0 0;
+}
+
+.clients {
+    margin: 64px 0 0 0;
+
+    &-cards {
+        padding: 44px 0 0 0;
+        margin: 0 0 150px 0;
+
+        @media (max-width: 767px) {
+            padding: 14px 0 0 0;
+            margin: 0;
+        }
+    }
+}
+
+.price {
+    padding: 64px 0;
+
+    @media (max-width: 767px) {
+        padding: 64px 0 0 0;
+    }
+
+    &-bg {
+        display: block;
+        width: 100%;
+        background-color: $yellow;
+
+        @media (max-width: 767px) {
+            background-color: transparent;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 100px;
+
+        @media (max-width: 1100px) {
+            flex-direction: column;
+            align-items: flex-start
+        }
+    }
+
+    &-left {
+        max-width: 610px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        &__title {
+            color: #000;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+            font-size: 74px;
+            font-weight: 600;
+            line-height: 74px;
+            letter-spacing: -0.2px;
+        }
+
+        &__subtitle {
+            color: $light-grey;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            margin: 44px 0 0 0;
+            max-width: 500px;
+        }
+    }
+
+    &-right {
+        .form-wrapper {
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .form-wrapper {
+                max-width: 100%;
+            }
+
+            form {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.contacts {
+    margin: 64px 0 0 0;
+    padding: 0 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 767px) {
+        display: none;
+    }
+
+    .map {
+        margin: 64px 0 0 0;
+    }
+}

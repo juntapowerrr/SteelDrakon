@@ -1,0 +1,42 @@
+body {
+    //background-color: #1D1C20;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../assets/images/bg-metal-1.png), lightgray 50%;
+    background-size: cover;
+    background-position: center 100%;
+    background-repeat: repeat-y;
+}
+
+.title {
+    margin: 120px 0 0 0;
+    color: $white;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.2px;
+}
+
+.text {
+    margin: 20px 0 0 0;
+    color: $white-2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.experience {
+
+    //margin: 48px 0 0 0;
+    &__title {
+        padding: 0;
+
+        @media (max-width: 767px) {
+            padding: 0 0 0 0;
+        }
+    }
+}
+
+.price-about {
+    padding: 64px 0;
+}

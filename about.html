@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Steel Drakon - Про майстерню</title>
+    <link rel="stylesheet" href="./styles/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__image">
+            <div class="stats-loading">
+                <div class="dot-1"></div>
+                <div class="dot-2"></div>
+                <div class="dot-3"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/preloader.js"></script>
+    <div id="overlay"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="./" class="header__logo">
+                    <img src="./assets/images/logo.png" id="headerLogo" alt="Logo">
+                </a>
+                <div class="header__phone-mob">
+                    <a href*="#" class="btn-phone" id="btnPhone2">
+                        <img src="./assets/svg/phone.svg" alt="Icon phone">
+                    </a>
+                    <div class="methods-socials" id="phoneBody2">
+                        <a class="methods-socials__viber" href="viber://chat?number=38050668123123" target="_blank">
+                            <img src="./assets/svg/viber.svg" alt="Viber logo">
+                        </a>
+                        <a class="methods-socials__whatsapp" href="https://api.whatsapp.com/send?phone=38050668123123" target="_blank">
+                            <img src="./assets/svg/whatsapp.svg" alt="WhatsApp logo">
+                        </a>
+                        <a class="methods-socials__phone" href="tel:+38050668123123">
+                            <div class="methods-socials__phone-item">
+                                <img src="./assets/svg/phone.svg" alt="Phone icon">
+                            </div>
+                            <p class="methods-socials__phone-txt">050 668 123 123</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="./products.html" class="header__link" id="HeaderLink1">Наші вироби</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="header__link" id="HeaderLink2">Про майстерню</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html" class="header__link" id="HeaderLink3">Контакти</a>
+                        </li>
+                    </ul>
+                    <div class="header__phone">
+                        <a href*="#" class="btn-phone hover-btn" id="btnPhone1">
+                            <img src="./assets/svg/phone.svg" alt="Icon phone">
+                        </a>
+                        <div class="methods-socials" id="phoneBody1">
+                            <a class="methods-socials__viber" href="viber://chat?number=38050668123123" target="_blank">
+                                <img src="./assets/svg/viber.svg" alt="Viber logo">
+                            </a>
+                            <a class="methods-socials__whatsapp" href="https://api.whatsapp.com/send?phone=38050668123123" target="_blank">
+                                <img src="./assets/svg/whatsapp.svg" alt="WhatsApp logo">
+                            </a>
+                            <a class="methods-socials__phone" href="tel:+38050668123123">
+                                <div class="methods-socials__phone-item">
+                                    <img src="./assets/svg/phone.svg" alt="Phone icon">
+                                </div>
+                                <p class="methods-socials__phone-txt">050 668 123 123</p>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="header__title">
+                        Створюємо унікальні та ексклюзивні вироби з металу будь якої складності
+                    </p>
+                    <a href="./#sectionPrice" class="btn btn-yellow hover-btn" id="btnCta1">Обговорити проект</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="title">Про майстерню</h1>
+        <p class="text">Створюємо унікальні та ексклюзивні вироби з металу будь якої складності</p>
+    </div>
+    <div class="experience">
+        <div class="container">
+            <h2 class="experience__title">Наш досвід</h2>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <p class="experience-card__title">10</p>
+                    <p class="experience-card__subtitle">років досвіду роботи з металом</p>
+                </div>
+                <div class="experience-card">
+                    <p class="experience-card__title">250</p>
+                    <p class="experience-card__subtitle">виконаних проектів та 300 ескіз проектів</p>
+                </div>
+                <div class="experience-card">
+                    <p class="experience-card__title">200</p>
+                    <p class="experience-card__subtitle">тон металу перероблено</p>
+                </div>
+                <div class="experience-card">
+                    <p class="experience-card__title">+1</p>
+                    <p class="experience-card__subtitle">непонятный блок</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clients">
+        <div class="container">
+            <h2 class="clients__title">Ми працюємо з</h2>
+            <div class="clients-cards">
+                <div class="clients-card">
+                    <div class="clients-card__icon">
+                        <img src="./assets/svg/client.svg" alt="Client icon">
+                    </div>
+                    <p class="clients-card__txt">приватними замовниками</p>
+                </div>
+                <div class="clients-card">
+                    <div class="clients-card__icon">
+                        <img src="./assets/svg/client.svg" alt="Client icon">
+                    </div>
+                    <p class="clients-card__txt">бюджетними та комерційними установами</p>
+                </div>
+                <div class="clients-card">
+                    <div class="clients-card__icon">
+                        <img src="./assets/svg/client.svg" alt="Client icon">
+                    </div>
+                    <p class="clients-card__txt">архітекторами</p>
+                </div>
+                <div class="clients-card">
+                    <div class="clients-card__icon">
+                        <img src="./assets/svg/client.svg" alt="Client icon">
+                    </div>
+                    <p class="clients-card__txt">ландшафтними дизайнерами</p>
+                </div>
+                <div class="clients-card">
+                    <div class="clients-card__icon">
+                        <img src="./assets/svg/client.svg" alt="Client icon">
+                    </div>
+                    <p class="clients-card__txt">приватними забудовниками</p>
+                </div>
+                <div class="clients-card">
+                    <div class="clients-card__icon">
+                        <img src="./assets/svg/client.svg" alt="Client icon">
+                    </div>
+                    <p class="clients-card__txt">проектними компаніями</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="price price-bg price-about" id="sectionPrice">
+        <div class="price-wrapper container">
+            <div class="price-left">
+                <h2 class="price-left__title">Бажаєте прорахувати ціну?</h2>
+                <h2 class="price-left__subtitle">Залишайте заявку та наш менеджер прорахує вам ціни</h2>
+            </div>
+            <div class="price-right">
+                <div class="form-wrapper">
+                    <h2 class="form-wrapper__title">Обговорити проект</h2>
+                    <form action="./php/mail.php" method="post" class="form">
+                        <input class="form-input" type="text" name="name" placeholder="Ваше Ім'я" required>
+                        <input class="form-input form-input-phone" type="tel" name="phone" placeholder="Номер телефону" required>
+                        <select class="form-input appearance-none" name="product" id="product">
+                            <option value="" selected>Оберіть виріб</option>
+                            <option value="furniture">Ковані меблі</option>
+                            <option value="gates">Ворота та паркани</option>    
+                            <option value="landscaping">Благоустрій</option>
+                            <option value="braziers">Ковані мангали</option>
+                            <option value="railings">Ковані перила</option>
+                            <option value="benches">Ковані лавки</option>
+                            <option value="interior">Вироби для інтерʼєру</option>
+                            <option value="sculptures">Скульптури</option>
+                            <option value="armor">Ковані обладунки</option>
+                            <option value="metal">Металоконструкції</option>
+                            <option value="idea">Ваша ідея</option>
+                          </select>
+                          <textarea class="form-textarea" name="text" placeholder="Коротко про проєкт"></textarea>
+                        <button class="btn btn-yellow hover-btn" type="submit">Залишити заявку</button>
+                    </form>
+                    <div class="methods">
+                        <p class="methods__txt">або обирай альтернативні методи</p>
+                        <div class="methods-socials">
+                            <a class="methods-socials__viber" href="viber://chat?number=38050668123123" target="_blank">
+                                <img src="./assets/svg/viber.svg" alt="Viber logo">
+                            </a>
+                            <a class="methods-socials__whatsapp" href="https://api.whatsapp.com/send?phone=38050668123123" target="_blank">
+                                <img src="./assets/svg/whatsapp.svg" alt="WhatsApp logo">
+                            </a>
+                            <a class="methods-socials__phone" href="tel:+38050668123123">
+                                <div class="methods-socials__phone-item">
+                                    <img src="./assets/svg/phone.svg" alt="Phone icon">
+                                </div>
+                                <p class="methods-socials__phone-txt">050 668 123 123</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <div class="footer-items__wrapper">
+                <ul class="footer-items">
+                    <li class="footer-item">
+                        <a class="footer-link" href="./products.html">Наші вироби</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="./about.html">Про майстерню</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="./contacts.html">Контакти</a>
+                    </li>
+                </ul>
+                <p class="footer__subtitle">Інше:</p>
+                <ul class="footer-items">
+                    <li class="footer-item">
+                        <a class="footer-link" href="">Політика конфедиційності</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="">Політика правил</a>
+                    </li>
+                </ul>
+                <p class="footer__copyright">
+                    2023 (c) Steel Drakon. Усі права захищені. 
+                </p>
+            </div>
+            <div class="email">
+                <h2 class="email__title">Пошта для технічного завдання:</h2>
+                <div class="email-card">
+                    <div class="email-card__wrapper">
+                        <img src="./assets/svg/mail.svg" alt="Email icon">
+                        <p class="email-text">example@gmail.com</p>
+                    </div>
+                    <button data-url-copied-text="Скопійовано!" onclick="copyText()" role="button">
+                        <img src="./assets/svg/copy.svg" alt="Copy icon">
+                    </button>
+                </div>
+            </div>
+            <div class="map">
+                <h2 class="map__title">Нас можна знайти:</h2>
+                <div class="map-card">
+                    <div class="map-card__title">
+                        <img src="./assets/svg/location.svg" alt="Location icon">
+                        <a href="https://maps.app.goo.gl/U6FXpQwaRv23T5UA7" target="_blank">м. Миколаїв, вул. Млинна, 23</a>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d87153.78204521186!2d32.003187000000004!3d46.950771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5cbe8adc2a363%3A0xa913911d5f9b3091!2sSteeldrakon!5e0!3m2!1suk!2suk!4v1697986347111!5m2!1suk!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/fixedheaderscroll.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/copy.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/form-send.js"></script>
+</body>
+</html>
