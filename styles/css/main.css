@@ -133,12 +133,34 @@ button {
   display: block;
   transform: translate(0, -2px);
 }
+@media (max-width: 900px) {
+  .hover-btn:hover {
+    transform: translate(0, 0);
+  }
+}
 .hover-img {
   transition: all 0.3s ease;
 }
 .hover-img:hover {
   display: block;
   transform: scale(1.03);
+}
+@media (max-width: 900px) {
+  .hover-img:hover {
+    transform: translate(0, 0);
+  }
+}
+.hover-btn-flex {
+  transition: all 0.3s ease;
+}
+.hover-btn-flex:hover {
+  display: flex;
+  transform: translate(0, -2px);
+}
+@media (max-width: 900px) {
+  .hover-btn-flex:hover {
+    transform: translate(0, 0);
+  }
 }
 
 @media (max-width: 767px) {
@@ -1181,7 +1203,7 @@ button {
   align-items: center;
   gap: 10px;
 }
-.email-card__wrapper p {
+.email-card__wrapper .email-text {
   color: #F7CA3A;
   font-size: 14px;
   font-weight: 600;
