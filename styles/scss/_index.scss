@@ -66,29 +66,7 @@
         }
 
         &__location {
-            width: max-content;
-            padding: 12px;
             margin: 24px 0 0 0;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(29, 28, 32, 0.10);
-
-            @media (max-width: 767px) {
-                padding: 6px 12px;
-                margin: 20px 0 0 0;
-            }
-
-            p {
-                color: #fff;
-                text-align: center;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 22px;
-
-                @media (max-width: 767px) {
-                    font-size: 14px;
-                }
-            }
         }
 
         &__subtitle {
@@ -558,6 +536,10 @@
             line-height: 22px;
             margin: 44px 0 0 0;
             max-width: 500px;
+        }
+
+        &__location {
+            margin: 44px 0 0 0;
         }
     }
 

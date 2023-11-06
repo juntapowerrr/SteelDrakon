@@ -252,30 +252,7 @@ button {
   }
 }
 .main-content__location {
-  width: max-content;
-  padding: 12px;
   margin: 24px 0 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(29, 28, 32, 0.1);
-}
-@media (max-width: 767px) {
-  .main-content__location {
-    padding: 6px 12px;
-    margin: 20px 0 0 0;
-  }
-}
-.main-content__location p {
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-}
-@media (max-width: 767px) {
-  .main-content__location p {
-    font-size: 14px;
-  }
 }
 .main-content__subtitle {
   color: #BBB;
@@ -681,6 +658,9 @@ button {
   line-height: 22px;
   margin: 44px 0 0 0;
   max-width: 500px;
+}
+.price-left__location {
+  margin: 44px 0 0 0;
 }
 .price-right .form-wrapper {
   margin: 0;
@@ -1678,4 +1658,30 @@ body {
 
 .price-about {
   padding: 64px 0;
+}
+
+.location-item {
+  width: max-content;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(29, 28, 32, 0.1);
+}
+@media (max-width: 767px) {
+  .location-item {
+    padding: 6px 12px;
+    margin: 20px 0 0 0;
+  }
+}
+.location-item p {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+@media (max-width: 767px) {
+  .location-item p {
+    font-size: 14px;
+  }
 }
