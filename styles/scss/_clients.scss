@@ -16,8 +16,8 @@
     &-cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 44px;
+        justify-content: center;
+        gap: 24px;
         align-content: stretch;
 
         @media (max-width: 767px) {
@@ -29,13 +29,13 @@
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         background: $dark-grey;
-        padding: 32px;
+        padding: 40px 20px 40px 37px;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
         gap: 42px;
-        flex-basis: calc(100% / 3 - 42px);
-
+        //flex-basis: calc(100% / 3 - 42px);
+        flex-basis: 220px;
         @media (max-width: 767px) {
             flex-direction: row;
             align-items: center;
