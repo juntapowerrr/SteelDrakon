@@ -155,6 +155,15 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transform: translateZ(0);
 
+            @media (max-width: 900px) {
+                height: calc(423px / 2);
+                background-size: cover;
+            }
+
+            // @media (max-width: 767px) {
+            //     height: 144px;
+            // }
+
             &--txt {
                 color: $yellow;
                 font-size: 18px;
@@ -254,6 +263,11 @@
                 background: url(../../assets/images/furniture.png) no-repeat;
                 flex-basis: 280px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: center 10%;
+                }
             }
 
             .services-cards__card:nth-child(2) {
@@ -261,12 +275,22 @@
                 background-size: 580px 430px;
                 background-position: center top;
                 flex-basis: 580px;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 105%;
+                }
             }
 
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/landscaping.png) no-repeat;
                 flex-basis: 280px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
         }
 
@@ -275,6 +299,11 @@
                 background: url(../../assets/images/braziers.png) no-repeat;
                 flex-basis: 580px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
 
             .services-cards__card:nth-child(2) {
@@ -282,6 +311,10 @@
                 flex-basis: 580px;
                 background-size: cover;
                 background-position: 100%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                }
             }
         }
 
@@ -290,18 +323,33 @@
                 background: url(../../assets/images/benches.png) no-repeat;
                 flex-basis: 580px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
 
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/interior.png) no-repeat;
                 flex-basis: 280px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
 
             .services-cards__card:nth-child(3) {
                 background: url(../../assets/images/sculptures.png) no-repeat;
                 flex-basis: 280px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
         }
 
@@ -310,12 +358,22 @@
                 background: url(../../assets/images/armor.png) no-repeat;
                 flex-basis: 280px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
 
             .services-cards__card:nth-child(2) {
                 background: url(../../assets/images/metal.png) no-repeat;
                 flex-basis: 280px;
                 background-position: 105%;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
             }
 
             .services-cards__card:nth-child(3) {
@@ -323,6 +381,11 @@
                 flex-basis: 580px;
                 background-position: 105%;
                 position: relative;
+
+                @media (max-width: 900px) {
+                    background-size: 100%;
+                    background-position: 100%;
+                }
 
                 .btn {
                     position: absolute;
@@ -354,9 +417,14 @@
 
         &__card {
             padding: 11px 0 0 11px;
-            height: 144px;
+            //height: 144px;
+            height: calc(423px / 2);
             border-radius: 12px;
             position: relative;
+
+            @media (max-width: 550px) {
+                height: 144px;
+            }
 
             &::before {
                 content: '';
@@ -386,80 +454,100 @@
         &__row:nth-child(1) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/furniture.png) no-repeat;
-                flex-basis: 100px;
-                background-size: 100%;
-                background-position: 105%;
+                //flex-basis: 100px;
+                flex-basis: 30%;
+                background-size: cover;
+                //background-position: 105%;
+                background-position: 105% 10%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/gates.jpg) no-repeat;
-                flex-basis: 220px;
+                //flex-basis: 220px;
+                flex-basis: 70%;
                 background-size: cover;
-                background-position: 101%;
+                //background-position: 101%;
+                background-position: 100% 10%;
             }
         }
 
         &__row:nth-child(2) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/landscaping-mob.png) no-repeat;
-                flex-basis: 160px;
+                //flex-basis: 160px;
+                flex-basis: 50%;
+                //background-size: cover;
+                // background-position: 105%;
                 background-size: cover;
-                background-position: 105%;
+                background-position: 100%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/interior.png) no-repeat;
-                flex-basis: 160px;
+                //flex-basis: 160px;
+                flex-basis: 50%;
                 background-size: cover;
-                background-position: center bottom;
+                //background-position: center bottom;
+                background-position: 100% 50%;
             }
         }
 
         &__row:nth-child(3) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/braziers.png) no-repeat;
-                flex-basis: 220px;
+                // flex-basis: 220px;
+                flex-basis: 70%;
                 background-size: cover;
-                background-position: 105%;
+                // background-position: 105%;
+                background-position: 100% 100%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/railings-mob.png) no-repeat;
-                flex-basis: 100px;
+                // flex-basis: 100px;
+                flex-basis: 30%;
                 background-size: cover;
-                background-position: 25% 0%;
+                // background-position: 25% 0%;
+                background-position: 25%;
             }
         }
 
         &__row:nth-child(4) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/benches-mob.png) no-repeat;
-                flex-basis: 160px;
+                // flex-basis: 160px;
+                flex-basis: 50%;
                 background-size: cover;
                 background-position: 80% 105%;
+                //background-position: 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/sculptures-mob.png) no-repeat;
-                flex-basis: 160px;
+                // flex-basis: 160px;
+                flex-basis: 50%;
                 background-size: cover;
-                background-position: 105%;
+                // background-position: 105%;
+                background-position: 105% 45%;
             }
         }
 
         &__row:nth-child(5) {
             .services-cards-mob__card:nth-child(1) {
                 background: url(../../assets/images/armor.png) no-repeat;
-                flex-basis: 100px;
+                // flex-basis: 100px;
+                flex-basis: 30%;
                 background-size: cover;
                 background-position: 105%;
             }
 
             .services-cards-mob__card:nth-child(2) {
                 background: url(../../assets/images/metal-mob.png) no-repeat;
-                flex-basis: 220px;
+                // flex-basis: 220px;
+                flex-basis: 70%;
                 background-size: cover;
-                background-position: 105%;
+                // background-position: 105%;
+                background-position: 105% 105%;
             }
         }
     }
