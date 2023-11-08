@@ -922,7 +922,7 @@ button {
   z-index: 3;
   cursor: pointer;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .header__phone {
     display: none;
   }
@@ -957,7 +957,7 @@ button {
   z-index: 3;
   margin-left: auto;
 }
-@media (min-width: 767px) {
+@media (min-width: 900px) {
   .header__phone-mob {
     display: none;
   }
@@ -995,8 +995,7 @@ button {
   width: calc(100vw + 2px);
   min-width: 100%;
 }
-.header .btn-yellow,
-.header .btn-phone {
+.header .btn-yellow {
   z-index: 3;
 }
 
@@ -1308,7 +1307,7 @@ button {
   margin: 70px 0 0 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .filter > .container:first-child {
     padding: 0;
     margin: 0 0 0 20px;
@@ -1320,7 +1319,7 @@ button {
   padding: 44px 0;
   background-color: #1D1C20;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .buttons__wrapper {
     padding: 22px 0;
   }
@@ -1333,7 +1332,7 @@ button {
   flex-wrap: wrap;
   gap: 6px;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .buttons {
     max-width: 100%;
     overflow-x: scroll;
@@ -1375,46 +1374,41 @@ button {
 }
 
 .items {
-  width: 100%;
+  max-width: 100%;
   margin: 44px 0 0 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px 50px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1050px) {
+  .items {
+    gap: 20px 25px;
+  }
+}
+@media (max-width: 900px) {
   .items {
     margin: 22px 0 0 0;
-  }
-}
-@media (max-width: 625px) {
-  .items {
     gap: 20px 8px;
-  }
-}
-@media (max-width: 400px) {
-  .items {
-    justify-content: space-between;
-  }
-}
-@media (max-width: 368px) {
-  .items {
-    justify-content: flex-start;
   }
 }
 
 .item {
-  max-width: 200px;
-  min-width: 200px;
+  flex-basis: calc(20% - 50px);
 }
-@media (max-width: 625px) {
+@media (max-width: 1050px) {
   .item {
-    min-width: max-content;
+    flex-basis: calc(25% - 25px);
   }
 }
-@media (max-width: 368px) {
+@media (max-width: 767px) {
   .item {
-    max-width: 135px;
-    min-width: 0;
+    flex-basis: calc(33.3333333333% - 8px);
+  }
+}
+@media (max-width: 500px) {
+  .item {
+    flex-basis: calc(50% - 8px);
   }
 }
 .item__thumbnail {
@@ -1422,11 +1416,6 @@ button {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
-}
-@media (max-width: 625px) {
-  .item__thumbnail {
-    width: 100%;
-  }
 }
 .item__thumbnail img {
   display: block;
@@ -1438,7 +1427,6 @@ button {
 }
 .item__title {
   margin: 12px 0 0 0;
-  max-width: 160px;
   color: #BBB;
   font-size: 14px;
   font-weight: 400;

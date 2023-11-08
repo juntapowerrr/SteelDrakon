@@ -212,7 +212,7 @@
         z-index: 3;
         cursor: pointer;
 
-        @media (max-width: 767px) {
+        @media (max-width: 900px) {
             display: none;
         }
 
@@ -251,7 +251,7 @@
         z-index: 3;
         margin-left: auto;
 
-        @media (min-width: 767px) {
+        @media (min-width: 900px) {
             display: none;
         }
 
@@ -294,8 +294,7 @@
         }
     }
 
-    .btn-yellow,
-    .btn-phone {
+    .btn-yellow {
         z-index: 3;
     }
 }
