@@ -1,0 +1,198 @@
+.accordeon {
+    width: 100%;
+}
+
+.accordeon__item {
+    margin: 0 0 24px 0;
+    border-radius: 12px;
+    border: 1px solid #1D1C20;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 2px 6px 0px rgba(31, 34, 41, 0.04), 0px 0px 1px 0px rgba(31, 34, 41, 0.24);
+    transition: all .3s ease;
+}
+
+.accordeon__button {
+    display: flex;
+    flex-direction: column;
+    //gap: 4px;
+    position: relative;
+    color: gray;
+    padding: 24px;
+    cursor: pointer;
+    border-radius: 12px;
+    border-bottom: 1px solid transparent;
+
+    span {
+        color: #A9A9A9;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+    }
+}
+
+.accordeon__button:after {
+    content: url(../../assets/svg/plus-icon.svg);
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    transition: content .3s ease;
+}
+
+// .accordeon__button.activeA:after {
+//     content: url(../../assets/svg/minus-icon.svg);
+//     top: 16px;
+// }
+
+.accordeon__panel {
+    //border-radius: 0 0 12px 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+.panel__text {
+    padding: 24px;
+    width: 100%;
+    transition: all .3s ease;
+
+    p {
+        color: #A9A9A9;
+        ;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+}
+
+.activeA {
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #1D1C20;
+}
+
+// .container-accordion {
+//     margin: 0 auto;
+//     width: 100%;
+// }
+
+// .accordion {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     gap: 24px;
+
+//     .accordion-item {
+//         width: 100%;
+//         padding: 24px;
+//         border-radius: 12px;
+//         border: 1px solid #1D1C20;
+//         background: rgba(255, 255, 255, 0.00);
+//         box-shadow: 0px 2px 6px 0px rgba(31, 34, 41, 0.04), 0px 0px 1px 0px rgba(31, 34, 41, 0.24);
+//     }
+
+//     button {
+//         position: relative;
+//         display: block;
+//         text-align: left;
+//         width: 100%;
+//         border: none;
+//         outline: none;
+//         padding: 0;
+//         -webkit-tap-highlight-color: transparent;
+
+//         // @media (max-width: 1150px) {
+//         //     font-size: 14px;
+//         // }
+
+//         &:hover,
+//         &:focus,
+//         &:focus-visible {
+//             cursor: pointer;
+//             box-shadow: none;
+
+//             &::after {
+//                 cursor: pointer;
+//             }
+//         }
+
+//         .accordion-title {
+//             color: #A9A9A9;
+//             font-size: 18px;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: 28px;
+//         }
+
+//         .icon {
+//             display: inline-block;
+//             position: absolute;
+//             top: 11px;
+//             right: 5px;
+//             width: 22px;
+//             height: 22px;
+
+//             &::before {
+//                 display: block;
+//                 position: absolute;
+//                 content: '';
+//                 top: 9px;
+//                 left: 5px;
+//                 width: 10px;
+//                 height: 2px;
+//                 background: #fff;
+//             }
+
+//             &::after {
+//                 display: block;
+//                 position: absolute;
+//                 content: '';
+//                 top: 5px;
+//                 left: 9px;
+//                 width: 2px;
+//                 height: 10px;
+//                 background: #fff;
+//             }
+//         }
+//     }
+
+//     button[aria-expanded='true'] {
+//         .icon {
+//             &::after {
+//                 width: 0;
+//             }
+//         }
+
+//         +.accordion-content {
+//             opacity: 1;
+//             max-height: 100%;
+//             transition: all .3s ease;
+//             will-change: opacity, max-height;
+//         }
+//     }
+
+//     .accordion-content {
+//         opacity: 0;
+//         max-height: 0;
+//         overflow: hidden;
+//         transition: opacity .3s ease, max-height .3s ease;
+//         will-change: opacity, max-height;
+//         //margin: 24px 0 0 0;
+
+//         p {
+//             color: var(--Gray, #CFD9E1);
+//             font-size: 15px;
+//             font-weight: 400;
+//             line-height: 25px;
+
+//             padding: 0 50px 0 0;
+
+//             // @media (max-width: 1150px) {
+//             //     font-size: 12px;
+//             // }
+//         }
+
+//         a {
+//             color: var(--Gray, #CFD9E1);
+//         }
+//     }
+// }

@@ -788,6 +788,15 @@ button {
   margin: 64px 0 0 0;
 }
 
+.faq {
+  padding: 64px 0;
+}
+@media (max-width: 767px) {
+  .faq {
+    padding: 0 0 64px 0;
+  }
+}
+
 #overlay {
   display: none;
   position: fixed;
@@ -838,17 +847,14 @@ button {
   align-items: center;
 }
 .header__logo {
-  overflow: hidden;
   position: relative;
   z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 190px;
 }
 .header__logo img {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .header__burger {
   display: none;
@@ -1770,4 +1776,66 @@ body {
   .location-item p {
     font-size: 14px;
   }
+}
+
+.accordeon {
+  width: 100%;
+}
+
+.accordeon__item {
+  margin: 0 0 24px 0;
+  border-radius: 12px;
+  border: 1px solid #1D1C20;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 2px 6px 0px rgba(31, 34, 41, 0.04), 0px 0px 1px 0px rgba(31, 34, 41, 0.24);
+  transition: all 0.3s ease;
+}
+
+.accordeon__button {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: gray;
+  padding: 24px;
+  cursor: pointer;
+  border-radius: 12px;
+  border-bottom: 1px solid transparent;
+}
+.accordeon__button span {
+  color: #A9A9A9;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.accordeon__button:after {
+  content: url(../../assets/svg/plus-icon.svg);
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  transition: content 0.3s ease;
+}
+
+.accordeon__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.panel__text {
+  padding: 24px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.panel__text p {
+  color: #A9A9A9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.activeA {
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid #1D1C20;
 }
