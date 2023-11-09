@@ -1469,7 +1469,6 @@ button {
   margin: 44px 0 0 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px 50px;
 }
 @media (max-width: 1050px) {
@@ -1523,6 +1522,7 @@ button {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.5px;
+  display: none;
 }
 
 .clear,
