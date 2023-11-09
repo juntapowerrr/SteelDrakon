@@ -733,9 +733,6 @@ button {
     align-items: flex-start;
   }
 }
-.price-left {
-  max-width: 610px;
-}
 @media (max-width: 767px) {
   .price-left {
     display: none;
