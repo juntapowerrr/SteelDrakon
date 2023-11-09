@@ -666,6 +666,7 @@
 
 .faq {
     padding: 64px 0;
+
     &__title {
         margin: 0 0 44px 0;
         color: var(--White, #FFF);
@@ -675,6 +676,7 @@
         line-height: 25px;
         letter-spacing: 0.091px;
     }
+
     @media (max-width: 767px) {
         padding: 0 0 64px 0;
     }
