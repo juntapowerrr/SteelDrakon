@@ -20,9 +20,8 @@
         width: 100%;
         background-image: url("../../assets/images/bg-main.png");
         background-repeat: no-repeat;
-        background-size: 115%;
-        background-position: center 25%;
-        //background-position: center 15%;
+        background-size: cover;
+        background-position: center 10%;
 
         @media (max-width: 375px) {
             background-image: url("../../assets/images/bg-main-mob.png");
