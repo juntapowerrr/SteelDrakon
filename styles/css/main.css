@@ -776,6 +776,11 @@ button {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .contacts .container {
+    margin: 0;
+  }
+}
 @media (min-width: 767px) {
   .contacts {
     display: none;
@@ -1105,7 +1110,7 @@ button {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #1D1C20;
-  max-width: 330px;
+  min-width: 325px;
   padding: 25px 15px;
 }
 .form-input {
@@ -1285,6 +1290,11 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .email-card {
+    max-width: 100%;
+  }
+}
 .email-card__wrapper {
   display: flex;
   align-items: center;
@@ -1300,6 +1310,11 @@ button {
 
 .map {
   max-width: 330px;
+}
+@media (max-width: 767px) {
+  .map {
+    max-width: 100%;
+  }
 }
 .map__title {
   color: #FFF;
@@ -1332,6 +1347,11 @@ button {
   max-width: 100%;
   height: 275px;
   border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .map-card iframe {
+    width: 100%;
+  }
 }
 
 .footer {
