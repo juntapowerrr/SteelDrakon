@@ -44,10 +44,10 @@
     }
 
     &-content {
-        max-width: 600px;
+        max-width: 725px;
 
         @media (max-width: 767px) {
-            max-width: 325px;
+            max-width: 400px;
         }
 
         &__title {
@@ -653,11 +653,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @media (max-width: 767px) {
         .container {
             margin: 0;
         }
     }
+
     @media (min-width: 767px) {
         display: none;
     }

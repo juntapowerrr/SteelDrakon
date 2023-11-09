@@ -252,11 +252,11 @@ button {
   height: 100px;
 }
 .main-content {
-  max-width: 600px;
+  max-width: 725px;
 }
 @media (max-width: 767px) {
   .main-content {
-    max-width: 325px;
+    max-width: 400px;
   }
 }
 .main-content__title {
