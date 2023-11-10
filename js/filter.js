@@ -1,19 +1,32 @@
-function updateButtonStyles(clickedButton) {
-  // Сбросить стили для всех кнопок
-  $(".buttons span").css({
-    "background-color": "",
-    "color": ""
-  });
+$(function () {
+  var currentCategory = "all";
 
-  // Установить стили для активной кнопки
-  clickedButton.css({
-    "background-color": "#F7CA3A",
-    "color": "#000000"
-  });
-}
+  function updateButtonStyles(clickedButton) {
+    $(".buttons span").css({
+      "background-color": "",
+      "color": ""
+    });
 
-$(document).ready(function () {
-  // Функция для получения значения параметра из URL
+    clickedButton.css({
+      "background-color": "#F7CA3A",
+      "color": "#000000"
+    });
+  }
+
+  function scrollToFilter(clickedButton) {
+    var selectedOffset = clickedButton.offset().left;
+    var containerOffset = $(".buttons").offset().left;
+    var scrollAmount = selectedOffset - containerOffset;
+    $(".buttons").animate({
+      scrollLeft: "+=" + scrollAmount
+    }, "fast");
+  }
+
+  function openFullscreenImage(imageUrl) {
+    $("#fullscreen-image-wrapper").html('<img src="' + imageUrl + '">');
+    $("#fullscreen-image").fadeIn();
+  }
+
   function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -21,37 +34,92 @@ $(document).ready(function () {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
   }
 
-  // Обработчики событий для кнопок фильтрации
+  function showMoreCards(cardsToLoad) {
+    var hiddenItems = $(".filter .items .item." + currentCategory + ":hidden");
+    hiddenItems.slice(0, cardsToLoad).fadeIn();
+
+    if (hiddenItems.length === 0) {
+      $(".filter .load-more").hide();
+    }
+  }
+
+  function updateDescription(category, descriptions) {
+    var description = descriptions[category];
+
+    if (!description) {
+      description = descriptions.all;
+    }
+
+    $(".filter .description").text(description);
+  }
+
+  function setupLoadMoreButton(cardsToShow, loadMoreStepDesktop, loadMoreStepMobile) {
+    $(".filter .items .item." + currentCategory + ":hidden").hide();
+    $(".filter .items .item." + currentCategory + ":lt(" + cardsToShow + ")").fadeIn();
+
+    var totalItems = $(".filter .items .item." + currentCategory).length;
+
+    if (totalItems > cardsToShow) {
+      $(".filter .load-more").show();
+    } else {
+      $(".filter .load-more").hide();
+    }
+
+    $("#loadMoreBtn").on("click", function () {
+      var loadMoreStep = $(window).width() < 768 ? loadMoreStepMobile : loadMoreStepDesktop;
+      showMoreCards(loadMoreStep);
+
+      if ($(".filter .items .item." + currentCategory + ":hidden").length === 0) {
+        $(".filter .load-more").hide();
+      }
+    });
+  }
+
+  function loadDescriptions(callback) {
+    $.getJSON('json/descriptions.json', function (data) {
+      callback(data);
+    });
+  }
+
   $(".buttons span").on("click", function () {
     var category = $(this).attr("class");
     updateButtonStyles($(this));
 
-    if (category === "all") {
-      $(".items .item").fadeIn("fast");
-    } else {
-      $(".items .item").hide();
-      $(".items ." + category).fadeIn("fast");
+    if ($(".items").length) {
+      if (category === "all") {
+        $(".items .item").fadeIn("fast");
+      } else {
+        $(".items .item").hide();
+        $(".items ." + category).show();
+      }
     }
 
-    // Скролл к выбранному фильтру
-    var selectedOffset = $(this).offset().left;
-    var containerOffset = $(".buttons").offset().left;
-    var scrollAmount = selectedOffset - containerOffset;
-    $(".buttons").animate({ scrollLeft: "+=" + scrollAmount }, "fast");
+    scrollToFilter($(this));
   });
 
-  // Получаем значение параметра из URL
-  var filter = getUrlParameter('filter');
+  $(".filter .buttons span").on("click", function () {
+    currentCategory = $(this).attr("class");
 
-  // Активация фильтра, если параметр присутствует в URL
-  if (filter) {
-    $(".buttons span." + filter).click();
-  } else {
-    // Активация первой кнопки по умолчанию
-    $(".buttons span.all").click();
-  }
+    $(".filter .items .item").hide();
+    $(".filter .items .item." + currentCategory + ":hidden").slice(0, 10).fadeIn();
 
-  // Открытие изображения в полноэкранном режиме
+    loadDescriptions(function (descriptions) {
+      updateDescription(currentCategory, descriptions);
+    });
+
+    var totalItems = $(".filter .items .item." + currentCategory).length;
+
+    if (totalItems > 10) {
+      $(".filter .load-more").show();
+    } else {
+      $(".filter .load-more").hide();
+    }
+  });
+
+  $("#fullscreen-image").click(function () {
+    $(this).fadeOut();
+  });
+
   $(".filter .item").click(function () {
     var imageUrl = $(this).find("img").attr("src");
 
@@ -65,11 +133,27 @@ $(document).ready(function () {
 
   const element = document.querySelector(".buttons");
 
-  element.addEventListener('wheel', (event) => {
-    event.preventDefault();
+  if (element) {
+    element.addEventListener('wheel', (event) => {
+      event.preventDefault();
 
-    element.scrollBy({
-      left: event.deltaY < 0 ? -30 : 30,
+      element.scrollBy({
+        left: event.deltaY < 0 ? -30 : 30,
+      });
     });
-  });
+  }
+
+  var filter = getUrlParameter('filter');
+
+  if (filter) {
+    $(".buttons span." + filter).click();
+  } else {
+    $(".buttons span.all").click();
+  }
+
+  var cardsToShow = 10;
+  var loadMoreStepDesktop = 5;
+  var loadMoreStepMobile = 4;
+
+  setupLoadMoreButton(cardsToShow, loadMoreStepDesktop, loadMoreStepMobile);
 });
