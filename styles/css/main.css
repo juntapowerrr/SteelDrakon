@@ -1431,6 +1431,9 @@ button {
   .buttons__wrapper {
     padding: 22px 0;
   }
+  .buttons__wrapper .container {
+    padding: 0 0 0 20px;
+  }
 }
 
 .buttons {
@@ -1450,6 +1453,11 @@ button {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     flex-wrap: nowrap;
+  }
+}
+@media (max-width: 900px) {
+  .buttons span:last-child {
+    margin: 0 20px 0 0;
   }
 }
 
@@ -1486,7 +1494,8 @@ button {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px; /* 157.143% */
+  line-height: 22px;
+  /* 157.143% */
   margin: 22px 0 0 0;
 }
 

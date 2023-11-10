@@ -50,7 +50,7 @@ $(function () {
       description = descriptions.all;
     }
 
-    $(".filter .description").text(description);
+    $(".filter .description").hide().text(description).fadeIn("fast");
   }
 
   function setupLoadMoreButton(cardsToShow, loadMoreStepDesktop, loadMoreStepMobile) {
