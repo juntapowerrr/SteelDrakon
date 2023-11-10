@@ -51,14 +51,25 @@ $(document).ready(function () {
     $(".buttons span.all").click();
   }
 
-});
+  // Открытие изображения в полноэкранном режиме
+  $(".filter .item").click(function () {
+    var imageUrl = $(this).find("img").attr("src");
 
-const element = document.querySelector(".buttons");
+    $("#image-wrapper").html('<img src="' + imageUrl + '">');
+    $("#fullscreen-image").fadeIn();
+  });
 
-element.addEventListener('wheel', (event) => {
-  event.preventDefault();
+  $("#fullscreen-image").click(function () {
+    $(this).fadeOut();
+  });
 
-  element.scrollBy({
-    left: event.deltaY < 0 ? -30 : 30,
+  const element = document.querySelector(".buttons");
+
+  element.addEventListener('wheel', (event) => {
+    event.preventDefault();
+
+    element.scrollBy({
+      left: event.deltaY < 0 ? -30 : 30,
+    });
   });
 });
