@@ -2019,7 +2019,7 @@ body {
   margin: 20px 0 0 0;
 }
 .policy .text-container .txt {
-  color: var(--Gray, #CFD9E1);
+  color: var(--Gray, #BBBBBB);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -2050,7 +2050,7 @@ body {
 }
 .policy .text-container li {
   list-style-type: decimal;
-  color: var(--Gray, #CFD9E1);
+  color: var(--Gray, #BBBBBB);
   font-size: 14px;
 }
 @media (max-width: 767px) {

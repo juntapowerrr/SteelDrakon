@@ -1,0 +1,9 @@
+//header
+ScrollReveal().reveal('.header');
+//filter
+ScrollReveal().reveal('.filter');
+//price-section
+ScrollReveal().reveal('.price-left');
+ScrollReveal().reveal('.price-right');
+//footer
+ScrollReveal().reveal('.footer');
