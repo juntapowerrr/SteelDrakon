@@ -1,0 +1,75 @@
+.policy {
+    margin: 120px 0 44px 0;
+    &-title {
+        color: $white;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 44px;
+        letter-spacing: -0.2px;
+
+        @media (max-width: 767px) {
+            font-size: 34px;
+            line-height: 38px;
+        }
+    }
+
+    .text-container {
+        margin: 20px 0 0 0;
+
+        .txt {
+            color: var(--Gray, #CFD9E1);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: -0.14px;
+
+            @media (max-width: 767px) {
+                font-size: 12px;
+            }
+
+            &-mr {
+                margin: 20px 0 0 0;
+            }
+
+            &-fw600 {
+                font-weight: 600;
+            }
+        }
+
+        .subtitle {
+            padding: 0 0 0 10px;
+        }
+
+        ul {
+            padding: 0 0 0 30px;
+
+            @media (max-width: 767px) {
+                padding: 0 0 0 20px;
+            }
+        }
+
+        li {
+            list-style-type: decimal;
+            color: var(--Gray, #CFD9E1);
+            font-size: 14px;
+
+            @media (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+
+        .list-disc {
+            padding: 0 0 0 15px;
+
+            @media (max-width: 767px) {
+                padding: 0 0 0 10px;
+            }
+        }
+
+        .item-disc {
+            list-style-type: disc;
+        }
+    }
+}

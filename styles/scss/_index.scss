@@ -21,9 +21,13 @@
         background-image: url("../../assets/images/bg-main.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center 10%;
+        background-position: center 24%;
 
-        @media (max-width: 375px) {
+        @media (max-width: 1440px) {
+            background-position: center 10%;
+        }
+
+        @media (max-width: 500px) {
             background-image: url("../../assets/images/bg-main-mob.png");
             background-position: center;
             background-size: cover;

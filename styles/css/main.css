@@ -230,9 +230,14 @@ button {
   background-image: url("../../assets/images/bg-main.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 10%;
+  background-position: center 24%;
 }
-@media (max-width: 375px) {
+@media (max-width: 1440px) {
+  .main-bg {
+    background-position: center 10%;
+  }
+}
+@media (max-width: 500px) {
   .main-bg {
     background-image: url("../../assets/images/bg-main-mob.png");
     background-position: center;
@@ -1210,7 +1215,7 @@ button {
 .methods__txt::before {
   content: "";
   display: block;
-  width: 52px;
+  width: 48px;
   height: 1px;
   background: #2F2E32;
   position: absolute;
@@ -1220,7 +1225,7 @@ button {
 .methods__txt::after {
   content: "";
   display: block;
-  width: 52px;
+  width: 48px;
   height: 1px;
   background: #2F2E32;
   position: absolute;
@@ -1991,4 +1996,76 @@ body {
 .activeA {
   border-radius: 12px 12px 0 0;
   border-bottom: 1px solid #1D1C20;
+}
+
+.policy {
+  margin: 120px 0 44px 0;
+}
+.policy-title {
+  color: #E8E8E8;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.2px;
+}
+@media (max-width: 767px) {
+  .policy-title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+}
+.policy .text-container {
+  margin: 20px 0 0 0;
+}
+.policy .text-container .txt {
+  color: var(--Gray, #CFD9E1);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+}
+@media (max-width: 767px) {
+  .policy .text-container .txt {
+    font-size: 12px;
+  }
+}
+.policy .text-container .txt-mr {
+  margin: 20px 0 0 0;
+}
+.policy .text-container .txt-fw600 {
+  font-weight: 600;
+}
+.policy .text-container .subtitle {
+  padding: 0 0 0 10px;
+}
+.policy .text-container ul {
+  padding: 0 0 0 30px;
+}
+@media (max-width: 767px) {
+  .policy .text-container ul {
+    padding: 0 0 0 20px;
+  }
+}
+.policy .text-container li {
+  list-style-type: decimal;
+  color: var(--Gray, #CFD9E1);
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .policy .text-container li {
+    font-size: 12px;
+  }
+}
+.policy .text-container .list-disc {
+  padding: 0 0 0 15px;
+}
+@media (max-width: 767px) {
+  .policy .text-container .list-disc {
+    padding: 0 0 0 10px;
+  }
+}
+.policy .text-container .item-disc {
+  list-style-type: disc;
 }
