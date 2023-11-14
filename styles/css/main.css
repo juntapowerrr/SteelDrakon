@@ -221,7 +221,7 @@ button {
 }
 @media (max-width: 767px) {
   .main {
-    padding: 64px 0 40px 0;
+    padding: 32px 0 40px 0;
   }
 }
 .main-bg {
@@ -271,6 +271,7 @@ button {
   .main-content__title {
     font-size: 40px;
     line-height: 44px;
+    max-width: 325px;
   }
 }
 .main-content__location {
@@ -283,6 +284,7 @@ button {
   line-height: 22px;
   margin: 44px 0 0 0;
   max-width: 530px;
+  text-shadow: 1px 1px 1px black;
 }
 @media (max-width: 767px) {
   .main-content__subtitle {
@@ -1400,13 +1402,15 @@ button {
   letter-spacing: 0.046px;
 }
 @media (max-width: 767px) {
-  .footer .email, .footer .map {
+  .footer .email,
+  .footer .map {
     display: none;
   }
 }
 @media (max-width: 950px) {
   .footer .footer__wrapper {
     flex-direction: column;
+    gap: 24px;
   }
 }
 
@@ -1504,6 +1508,7 @@ button {
   margin: 22px 0 0 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px 50px;
 }
 @media (max-width: 1050px) {
@@ -1619,6 +1624,15 @@ button {
   line-height: 24px;
   letter-spacing: 0.2px;
   padding: 7px 17px;
+}
+.load-more #loadMoreBtn:hover {
+  color: #F7CA3A;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .load-more #loadMoreBtn:hover {
+    color: #A6A7A9;
+  }
 }
 
 .price-products {
@@ -1889,7 +1903,7 @@ body {
 }
 @media (max-width: 767px) {
   .accordeon__item {
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
   }
 }
 

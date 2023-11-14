@@ -1,3 +1,5 @@
 $(window).on('load', function () {
-    $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+    $('.preloader').fadeOut().promise().done(function () {
+        $(this).delay(400).fadeOut('slow');
+    });
 });

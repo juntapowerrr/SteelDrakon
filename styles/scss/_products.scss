@@ -95,7 +95,7 @@
     margin: 22px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    //justify-content: space-between;
+    justify-content: center;
     gap: 20px 50px;
 
     // @media (max-width: 368px) {
@@ -227,6 +227,15 @@
         line-height: 24px;
         letter-spacing: 0.2px;
         padding: 7px 17px;
+
+        &:hover {
+            color: $yellow;
+            transition: all .3s ease;
+
+            @media (max-width: 767px) {
+                color: #A6A7A9;
+            }
+        }
     }
 }
 

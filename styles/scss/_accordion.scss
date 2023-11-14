@@ -11,14 +11,13 @@
     transition: all .3s ease;
 
     @media (max-width: 767px) {
-        margin: 0 0 4px 0;
+        margin: 0 0 8px 0;
     }
 }
 
 .accordeon__button {
     display: flex;
     flex-direction: column;
-    //gap: 4px;
     position: relative;
     color: gray;
     padding: 24px;
