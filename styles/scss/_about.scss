@@ -42,7 +42,8 @@ body {
     &-item {
         flex-basis: calc(100% / 3 - 80px);
         min-width: 345px;
-
+        display: flex;
+        flex-direction: column;
         @media (max-width: 1150px) {
             flex-basis: calc(100% / 2 - 40px);
         }
