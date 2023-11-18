@@ -120,7 +120,7 @@ $(function () {
     $(this).fadeOut();
   });
 
-  $(".filter .item").click(function () {
+  $(".filter .item .item__thumbnail").click(function () {
     var imageUrl = $(this).find("img").attr("src");
 
     $("#image-wrapper").html('<img src="' + imageUrl + '">');
