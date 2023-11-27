@@ -1888,6 +1888,8 @@ body {
 }
 @media (max-width: 767px) {
   .about-img {
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
   }
 }
